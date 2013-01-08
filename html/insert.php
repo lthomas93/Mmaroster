@@ -42,3 +42,5 @@ $result = $connection -> query($query);
   if(DB::isError($result)){
   die("Could not query the database: <br />"DB:errorMessage($result))'
   }
+
+$connection -> disconnect();
