@@ -43,4 +43,9 @@ function verification_phonenumber($Phone_number){
   if ((strlen($Phone_number) < 10) || (strlen($Phone_number) > 10)){
      echo "Please verify the ten digit phone number including the area code.</br>"
   }
+function verification_email($Email){
+  if ($Email == ""){
+     echo "Please enter your email.";
+  }
 }
+
