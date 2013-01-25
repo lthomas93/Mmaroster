@@ -1,8 +1,24 @@
 <html>
 <head>
 <title> Student Registration!</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+
+<div id="top">
+<h1>Student Upload!</h1>
+</div>
+
+<div id="left">
+<li><a href="#">Home</a></li></br>
+  <li><a href="studentupload.php">Insert Student</a></li></br>
+  <li><a href="guardianupload.php">Insert Guardian</a></li></br>
+ <p>1</p>
+</div>
+
+<div id="right">
+<pre>
+
 
 <?php
 require_once('db_login.php');
@@ -61,16 +77,24 @@ if (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=
 }
 else{
   echo '
-<h1>Please register!</h1>
+<h1>Upload Student!</h1>
 <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
-<label> Username: <input type="text" name="Username" /> </label> </br>
-<label> Password: <input type="text" name="Password" /> </label> </br>
 <label> Last Name: <input type="text" name="Last_name" /> </label> </br>
 <label> First Name: <input type="text" name="First_name" /> </label> </br>
-<label> School Name: <input type="text" name="School_name" /> </label> </br>
-<label> Phone Number: <input type="text" name="Phone_number" /> </label> </br>
-<label> Email: <input type="text" name="Email" /> </label> </br>
-<input type="submit" value="Complete Registration!">
+<label> Age: <input type="text" name="Age" /> </label> </br>
+<label> Address: <input type="text" name="Address" /> </label> </br>
+<label> City: <input type="text" name="City" /> </label> </br>
+<label> State: <input type="text" name="State" /> </label> </br>
+<label> Zip Code: <input type="text" name="Zip_code" /> </label> </br>
+<label> Minor: <input type="text" name="Minor" /> </label></br>
+<label> Guardian Id: <input type="text" name="Guardian_id" /><label></br>
+<label> Phone Number: <input type="text" name="Phone_number" /></label></br>
+<input type="submit" value="Upload Student!">
 </form>';
 }
 ?>
+</pre>
+</div>
+</body>
+</html>
+
