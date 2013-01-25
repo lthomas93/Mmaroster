@@ -1,9 +1,23 @@
 <html>
 <head>
 <title> Member Registration!</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
+<div id="top">
+<h1>User Registration</h1>
+</div>
+
+<div id="left">
+<li><a href="#">Home</a></li></br>
+  <li><a href="studentupload.php">Insert Student</a></li></br>
+  <li><a href="guardianupload.php">Insert Guardian</a></li></br>
+ <p>1</p>
+</div>
+
+<div id="right">
+<pre> 
 <?php
 require_once('db_login.php');
 require_once('DB.php');
@@ -11,6 +25,7 @@ $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_databa
   if(DB::isError($connection)){
   die("Could not connect to the database: <br />" .DB::errorMessage($connection));
   }
+
 
 require_once('insert.php');
 require_once('loginverification.php');
@@ -75,3 +90,8 @@ else{
 </form>';
 }
 ?>
+
+</pre>
+</div>
+</body>
+</html>
