@@ -13,6 +13,7 @@
 <li><a href="#">Home</a></li></br>
   <li><a href="studentupload.php">Insert Student</a></li></br>
   <li><a href="guardianupload.php">Insert Guardian</a></li></br>
+  <li><a href="studentquery.php">Search Student</a></li></br>
  <p>1</p>
 </div>
 
@@ -52,6 +53,10 @@ $Address = $_POST["Address"];
 $City = $_POST["City"];
   }
 
+  if (isset($_POST["State"])){
+$State = $_POST["State"];
+  }
+
   if (isset($_POST["Zip_code"])){
 $Zip_code = $_POST["Zip_code"];
   }
@@ -79,15 +84,15 @@ else{
   echo '
 <h1>Upload Student!</h1>
 <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
-<label> Last Name: <input type="text" name="Last_name" /> </label> </br>
-<label> First Name: <input type="text" name="First_name" /> </label> </br>
-<label> Age: <input type="text" name="Age" /> </label> </br>
-<label> Address: <input type="text" name="Address" /> </label> </br>
-<label> City: <input type="text" name="City" /> </label> </br>
-<label> State: <input type="text" name="State" /> </label> </br>
-<label> Zip Code: <input type="text" name="Zip_code" /> </label> </br>
-<label> Minor: <input type="text" name="Minor" /> </label></br>
-<label> Guardian Id: <input type="text" name="Guardian_id" /><label></br>
+<label> Last Name:    <input type="text" name="Last_name" /> </label> </br>
+<label> First Name:   <input type="text" name="First_name" /> </label> </br>
+<label> Age:          <input type="text" name="Age" /> </label> </br>
+<label> Address:      <input type="text" name="Address" /> </label> </br>
+<label> City:         <input type="text" name="City" /> </label> </br>
+<label> State:        <input type="text" name="State" /> </label> </br>
+<label> Zip Code:     <input type="text" name="Zip_code" /> </label> </br>
+<label> Minor:        <input type="text" name="Minor" /> </label></br>
+<label> Guardian Id:  <input type="text" name="Guardian_id" /><label></br>
 <label> Phone Number: <input type="text" name="Phone_number" /></label></br>
 <input type="submit" value="Upload Student!">
 </form>';
