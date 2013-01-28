@@ -11,7 +11,7 @@ function query_db($Last_name){
      $Last_name = stripslashes($Last_name);
   }
 
-  $Last_name = mysql_real_escape_string($Last_name)
+  $Last_name = mysql_real_escape_string($Last_name);
   $query = "SELECT * FROM members WHERE Last_name LIKE '%$Last_name%'";
 
   $result = $connection->query($query);
@@ -21,7 +21,7 @@ function query_db($Last_name){
   }
 
   echo('<table border="1">');
-  echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>";
+  echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
   while ($result_row = $result->fetchrow()) {
      echo "<tr><td>";
      echo $result_row[1] . '</td><td>';
