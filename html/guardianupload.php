@@ -14,6 +14,7 @@
 <li><a href="#">Home</a></li></br>
   <li><a href="studentupload.php">Insert Student</a></li></br>
   <li><a href="guardianupload.php">Insert Guardian</a></li></br>
+  <li><a href="studentquery.php">Search Student</a></li></br>
  <p>1</p>
 </div>
 
@@ -51,6 +52,10 @@ $Address = $_POST["Address"];
 
   if (isset($_POST["City"])){
 $City = $_POST["City"];
+  }
+
+  if (isset($_POST["State"])){
+$State = $_POST["State"];
   }
 
   if (isset($_POST["Zip_code"])){
