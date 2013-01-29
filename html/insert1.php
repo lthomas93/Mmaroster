@@ -17,7 +17,7 @@ $State = htmlentities($State);
 $Zip_code = htmlentities($Zip_code);
 $Minor = htmlentities($Minor);
 $Guardian_id = htmlentities($Guardian_id);
-$Phone_number = htmlentites($Phone_number);
+$Phone_number = htmlentities($Phone_number);
 
   if(get_magic_quotes_gpc()){
 $Last_name = stripslashes($Last_name);
@@ -29,7 +29,7 @@ $State = stripslashes($State);
 $Zip_code = stripslashes($Zip_code);
 $Minor = stripslashes($Minor);
 $Guardian_id = stripslashes($Guardian_id);
-$Phone_number = stripslashes($Phone_number)
+$Phone_number = stripslashes($Phone_number);
   }
 
 $Last_name = mysql_real_escape_string($Last_name);
@@ -39,11 +39,11 @@ $Address = mysql_real_escape_string($Address);
 $City = mysql_real_escape_string($City);
 $State = mysql_real_escape_string($State);
 $Zip_code = mysql_real_escape_string($Zip_code);
+$Phone_number = mysql_real_escape_string($Phone_number);
 $Minor = mysql_real_escape_string($Minor);
-$Guardian_id = mysql_real_escape_strip($Guardian_id);
-$Phone_number = mysql_real_escape_strip($Phone_number);
+$Guardian_id = mysql_real_escape_string($Guardian_id);
 
-$query="INSERT INTO student_roster VALUES (NULL,'$Last_name','$First_name','$Age','$Address','$City','$State','$Zip_code','$Minor','$Guardian_id','$Phone_number')";
+$query="INSERT INTO student_roster VALUES (NULL,'$Last_name','$First_name','$Age','$Address','$City','$State','$Zip_code','$Phone_number','$Minor','$Guardian_id')";
 $result=$connection->query($query);
 
   if(DB::isError($result)){
