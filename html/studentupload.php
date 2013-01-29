@@ -29,8 +29,8 @@ $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_databa
   die("Could not connect to the database: <br />" .DB::errorMessage($connection));
   }
   
-//require_once('insert.php');
-// got to change this to what file i make my upload function to ^
+require_once('insert1.php');
+
 require_once('loginverification.php');
 
   if (isset($_POST["Last_name"])){
