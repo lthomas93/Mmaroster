@@ -43,8 +43,7 @@ $Minor = mysql_real_escape_string($Minor);
 $Guardian_id = mysql_real_escape_strip($Guardian_id);
 $Phone_number = mysql_real_escape_strip($Phone_number);
 
-//$query="INSERT INTO members VALUES (NULL,'$Last_name','$First_name','$Age','$Address','$City','$State','$Zip_code','$Minor','$Guardian_id','$Phone_number')";
-// need to change the members to whatever the table called ^
+$query="INSERT INTO student_roster VALUES (NULL,'$Last_name','$First_name','$Age','$Address','$City','$State','$Zip_code','$Minor','$Guardian_id','$Phone_number')";
 $result=$connection->query($query);
 
   if(DB::isError($result)){
