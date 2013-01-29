@@ -41,8 +41,7 @@ $State = mysql_real_escape_string($State);
 $Zip_code = mysql_real_escape_string($Zip_code);
 $Phone_number = mysql_real_escape_strip($Phone_number);
 
-//$query="INSERT INTO members VALUES ('$Guardian_id','$Last_name','$First_name','$Age','$Address','$City','$State','$Zip_code','$Phone_number')";
-// need to change the members to whatever the table called ^
+$query="INSERT INTO guardian_roster VALUES ('$Guardian_id','$Last_name','$First_name','$Age','$Address','$City','$State','$Zip_code','$Phone_number')";
 $result=$connection->query($query);
 
   if(DB::isError($result)){
