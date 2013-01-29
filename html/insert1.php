@@ -51,7 +51,7 @@ $result=$connection->query($query);
   die("Could not query the database: <br />".DB::errorMessage($result));
   }
 
-echo "Registration complete! Thank you for signing up $Username!";
+echo "$Last_name, $First_name was added to the student roster!";
 $connection->disconnect();
 }
 ?>
