@@ -1,5 +1,5 @@
 <?php
-function register_student($Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Minor,$Guardian_id,$Phone_number){
+function register_student($Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Phone_number,$Minor,$Guardian_id){
 
 require_once('db_login.php');
 global $db_username, $db_password, $db_host, $db_database;
@@ -15,9 +15,9 @@ $Address = htmlentities($Address);
 $City = htmlentities($City);
 $State = htmlentities($State);
 $Zip_code = htmlentities($Zip_code);
+$Phone_number = htmlentities($Phone_number);
 $Minor = htmlentities($Minor);
 $Guardian_id = htmlentities($Guardian_id);
-$Phone_number = htmlentities($Phone_number);
 
   if(get_magic_quotes_gpc()){
 $Last_name = stripslashes($Last_name);
@@ -27,9 +27,9 @@ $Address = stripslashes($Address);
 $City = stripslashes($City);
 $State = stripslashes($State);
 $Zip_code = stripslashes($Zip_code);
+$Phone_number = stripslashes($Phone_number);
 $Minor = stripslashes($Minor);
 $Guardian_id = stripslashes($Guardian_id);
-$Phone_number = stripslashes($Phone_number);
   }
 
 $Last_name = mysql_real_escape_string($Last_name);
