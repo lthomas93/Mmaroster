@@ -61,6 +61,10 @@ $State = $_POST["State"];
 $Zip_code = $_POST["Zip_code"];
   }
 
+  if (isset($_POST["Phone_number"])){
+   $Phone_number = $_POST["Phone_number"];
+  }
+
   if (isset($_POST["Minor"])){
 $Minor = $_POST["Minor"];
   }
@@ -69,14 +73,11 @@ $Minor = $_POST["Minor"];
 $Guardian_id = $_POST["Guardian_id"];
   }
   
-  if (isset($_POST["Phone_number"])){
-   $Phone_number = $_POST["Phone_number"];
-  }
 
-if (isset($Last_name) && ($First_name) && ($Age) && ($Address) && ($City) && ($State) && ($Zip_code) && ($Minor) && ($Guardian_id) && ($Phone_number)) {
-  (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Minor !=NULL) && ($Guardian_id !=NULL) && ($Phone_number !=NULL));
-if (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Minor !=NULL) && ($Guardian_id !=NULL) && ($Phone_number !=NULL)){
-register_student($Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Minor,$Guardian_id,$Phone_number);
+if (isset($Last_name) && ($First_name) && ($Age) && ($Address) && ($City) && ($State) && ($Zip_code) && ($Phone_number) && ($Minor) && ($Guardian_id)) {
+  (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL) && ($Minor !=NULL) && ($Guardian_id !=NULL));
+if (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL) && ($Minor !=NULL) && ($Guardian_id !=NULL){
+register_student($Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Phone_number,$Minor,$Guardian_id);
   }        
 }
 else{
@@ -90,9 +91,9 @@ else{
 <label> City:         <input type="text" name="City" /> </label> </br>
 <label> State:        <input type="text" name="State" /> </label> </br>
 <label> Zip Code:     <input type="text" name="Zip_code" /> </label> </br>
+<label> Phone Number: <input type="text" name="Phone_number" /></label></br>
 <label> Minor:        <input type="text" name="Minor" /> </label></br>
 <label> Guardian Id:  <input type="text" name="Guardian_id" /><label></br>
-<label> Phone Number: <input type="text" name="Phone_number" /></label></br>
 <input type="submit" value="Upload Student!">
 </form>';
 }
