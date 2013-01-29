@@ -76,9 +76,9 @@ $Guardian_id = $_POST["Guardian_id"];
 
 if (isset($Last_name) && ($First_name) && ($Age) && ($Address) && ($City) && ($State) && ($Zip_code) && ($Phone_number) && ($Minor) && ($Guardian_id)) {
   (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL) && ($Minor !=NULL) && ($Guardian_id !=NULL));
-if (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL) && ($Minor !=NULL) && ($Guardian_id !=NULL){
+if (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL) && ($Minor !=NULL) && ($Guardian_id !=NULL)){
 register_student($Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Phone_number,$Minor,$Guardian_id);
-  }        
+  } 
 }
 else{
   echo '
