@@ -28,7 +28,7 @@ $Address = stripslashes($Address);
 $City = stripslashes($City);
 $State = stripslashes($State);
 $Zip_code = stripslashes($Zip_code);
-$Phone_number = stripslashes($Phone_number)
+$Phone_number = stripslashes($Phone_number);
   }
 
 $Guardian_id = mysql_real_escape_strip($Guardian_id);
