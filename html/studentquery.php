@@ -23,27 +23,32 @@
 
 
 <?php
+require_once ('db_login.php');
+require_once('DB.php');
+$connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
+  if(DB::isError($connection)){
+  die("Could not connect to the database:<br />".DB::errorMessage($connection));
+  }
 
 require_once('queryfunction.php');
-//require_once('db_login.php');
-//  $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
-//  if (DB::isError($connection)){
-//     die("Could not query the database: <br />". DB::errorMessage($connection));
-//  }
 
-if(isset($search)){
-$search = htmlentities($_POST["search"]);
+if (isset($_POST["Last_name"])){
+$Last_name = $_POST["Last_name"];
+
+
+//$self = htmlentities($_SERVER['PHP_SELF']);
+//if (isset($Last_name)){  
+//$Last_name !=NULL;
+if ($Last_name !=NULL){
+//$Last_name = $_POST["Last_name"];
+echo "The search string is $Last_name."; 
+ query_db($Last_name);
 }
-$self = htmlentities($_SERVER['PHP_SELF']);
-if (isset($search)){
- ($search != NULL);
-  query_db($search);
 }
 else {
      echo ('
-     <form action="'.$self.'" method="post">
-       <label>Last Name:
-         <input type="text" name="search"/>
+     <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
+       <label>Last Name: <input type="text" name="Last_name"/>
        </label>
        <input type="submit" value="Go!" />
      </form>
