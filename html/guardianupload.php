@@ -68,7 +68,7 @@ $Zip_code = $_POST["Zip_code"];
 if (isset($Last_name) && ($First_name) && ($Age) && ($Address) && ($City) && ($State) && ($Zip_code) && ($Phone_number)) {
   (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL));
 if (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL)){
-register_guardian($Guardian_id,$Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Phone_number)
+register_guardian($Guardian_id,$Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Phone_number);
         }
 }
 else{
