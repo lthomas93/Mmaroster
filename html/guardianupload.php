@@ -30,8 +30,7 @@ $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_databa
   die("Could not connect to the database: <br />" .DB::errorMessage($connection));
   }
   
-//require_once('insert.php');
-// got to change this to what file i make my upload function to ^
+require_once('insert2.php');
 require_once('loginverification.php');
 
   if (isset($_POST["Last_name"])){
@@ -69,8 +68,7 @@ $Zip_code = $_POST["Zip_code"];
 if (isset($Last_name) && ($First_name) && ($Age) && ($Address) && ($City) && ($State) && ($Zip_code) && ($Phone_number)) {
   (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL));
 if (($Last_name !=NULL) && ($First_name !=NULL) && ($Age !=NULL) && ($Address !=NULL) && ($City !=NULL) && ($State !=NULL) && ($Zip_code !=NULL) && ($Phone_number !=NULL)){
-//register($Username,$Password,$Last_name,$First_name,$School_name,$Phone_number,$Email);
-// got to change this to whatever i call the new insert function ^
+register_guardian($Guardian_id,$Last_name,$First_name,$Age,$Address,$City,$State,$Zip_code,$Phone_number)
         }
 }
 else{
