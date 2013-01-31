@@ -35,26 +35,82 @@ require_once('queryfunction.php');
 if (isset($_POST["Last_name"])){
 $Last_name = $_POST["Last_name"];
 
-
-//$self = htmlentities($_SERVER['PHP_SELF']);
-//if (isset($Last_name)){  
-//$Last_name !=NULL;
-if ($Last_name !=NULL){
-//$Last_name = $_POST["Last_name"];
-echo "The search string is $Last_name."; 
- query_db($Last_name);
+  if ($Last_name !=NULL){
+    echo "The search string is $Last_name."; 
+      query_db($Last_name);
 }
 }
 else {
      echo ('
      <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
-       <label>Last Name: <input type="text" name="Last_name"/>
-       </label>
-       <input type="submit" value="Go!" />
+       <label>Last Name: <input type="text" name="Last_name"/> </label>  <input type="submit" value="Go!" />
      </form>
- ');
+     ');
 }
 
+if (isset($_POST["First_name"])){
+$First_name = $_POST["First_name"];
+
+  if ($First_name !=NULL){
+    echo "The search string is $First_name";
+      query_db($First_name);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
+       <label>First Name: <input type="text" name="First_name"/></label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["Age"])){
+$Age = $_POST["Age"];
+
+ if ($Age !=NULL){
+   echo "The search string is $_Age";
+     query_db($Age);
+ }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"]'" method="POST">
+       <label>Age: <input type="text" name="Age"/></label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["Address"])) {
+$Address = $_POST["Address"];
+
+  if ($Address !=NULL){
+    echo "The search string is $Address";
+      query_db($Address);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"]'" method="POST">
+       <label>Address: <input type="text" name="Address"/></label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["City"])){
+$City = $_POST["City"];
+
+  if ($City !=NULL){
+    echo "The search string is $City";
+      query_db($City);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"]'" method=POST">
+       <label>City: <input type="text" name="City"/></label> <input type="submit" value="Go!' />
+      </form>
+      ');
+}
 ?>
 </pre>
 </div>
