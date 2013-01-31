@@ -74,7 +74,7 @@ $Age = $_POST["Age"];
 }
 else {
       echo ('
-      <form action="'.$_SERVER["PHP_SELF"]'" method="POST">
+      <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
        <label>Age: <input type="text" name="Age"/></label> <input type="submit" value="Go!" />
       </form>
       ');
@@ -90,7 +90,7 @@ $Address = $_POST["Address"];
 }
 else {
       echo ('
-      <form action="'.$_SERVER["PHP_SELF"]'" method="POST">
+      <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
        <label>Address: <input type="text" name="Address"/></label> <input type="submit" value="Go!" />
       </form>
       ');
@@ -106,8 +106,88 @@ $City = $_POST["City"];
 }
 else {
       echo ('
-      <form action="'.$_SERVER["PHP_SELF"]'" method=POST">
-       <label>City: <input type="text" name="City"/></label> <input type="submit" value="Go!' />
+      <form action="'.$_SERVER["PHP_SELF"].'" method=POST">
+       <label>City: <input type="text" name="City"/></label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["State"])){
+$State = $_POST["State"];
+
+  if ($State !=NULL){
+    echo "The search string is $State";
+      query_db($State);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"].'" method=POST">
+       <label>State: <input type="text" name="State"/></label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["Zip_code"])){
+$Zip_code = $_POST["Zip_code"];
+
+  if($Zip_code !=NULL) {
+    echo "The search string is $Zip_code";
+      query_db($Zip_code);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"].'" method=POST">
+       <label>Zip code: <input type="text" name="Zip_code"/></label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["Phone_number"])){
+$Phone_number = $_POST["Phone_number"];
+
+  if($Phone_number !=NULL){
+    echo "The search string is $Phone_number";
+      query_db($Phone_number);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"].'" method=POST">
+       <label>Phone Number: <input type="text" name="Zip_code"/><label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["Minor"])){
+$Minor = $_POST["Minor"];
+
+  if($Minor !=NULL){
+    echo "The search string is $Minor";
+      query_db($Minor);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"].'" method=POST">
+       <label>Minor: <input type="text" name="Minor"/></label> <input type="submit" value="Go!" />
+      </form>
+      ');
+}
+
+if (isset($_POST["Guardian_id"])){
+$Guardian_id = $_POST["Guardian_id"];
+
+  if($Guardian_id !=NULL){
+    echo "The search string is $Guardian_id";
+     query_db($Guardian_id);
+  }
+}
+else {
+      echo ('
+      <form action="'.$_SERVER["PHP_SELF"].'" method=POST">
+       <label>Guardian id: <input type="text" name="Guardian_id"/></label> <input type="submit" value="Go!" />
       </form>
       ');
 }
