@@ -53,13 +53,14 @@ require_once('DB.php');
 function query_db1($First_name){
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
 
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die("Could not query the database. </br>". DB::errorMessage($connection));
  }
 
-if ($get_magic_quotes_gpc()) {
+if (get_magic_quotes_gpc()) {
   $First_name = stripslashes($First_name);
  }
 
@@ -68,8 +69,8 @@ $First_name = mysql_real_escape_string($First_name);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.First_name LIKE '%$First_name%'";
 $result = $connection->query($query);
-if(DB::isError($result)); {
-  die ("Could not query the database.</br>". DB::errrorMessage($result));
+if(DB::isError($result)) {
+  die ("Could not query the database.</br>". DB::errorMessage($result));
   }
 
 echo('<table border="1">');
@@ -101,12 +102,14 @@ function query_db2($Age){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
   $Age = stripslashes($Age);
   }
 
@@ -147,12 +150,14 @@ function query_db3($Address){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
   $Address = stripslashes($Address);
   }
 
@@ -194,12 +199,14 @@ function query_db4($City){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
   $City = stripslashes($City);
   }
 
@@ -240,12 +247,14 @@ function query_db5($State){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
 
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
   $State = stripslashes($State);
   }
 
@@ -286,12 +295,14 @@ function query_db6($Zip_code){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
   $Zip_code = stripslashes($Zip_code);
   }
 
@@ -332,12 +343,14 @@ function query_db7($Phone_number){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
   $Phone_number = stripslashes($Phone_number);
   }
 
@@ -379,12 +392,14 @@ function query_db8($Minor){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
   $Minor = stripslashes($Minor);
   }
 
@@ -425,12 +440,14 @@ function query_db9($Guardian_id){
 
 require_once('db_login.php');
 require_once('DB.php');
+  global $db_username, $db_password, $db_host, $db_database;
+
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($get_magic_quotes_gpc()){
+if (get_magic_quotes_gpc()){
 $Guardian_id = stripslashes($Guardian_id);
   }
 
