@@ -10,9 +10,10 @@
 </div>
 
 <div id="left">
-<li><a href="#">Home</a></li></br>
+  <li><a href="#">Home</a></li></br>
   <li><a href="studentupload.php">Insert Student</a></li></br>
   <li><a href="guardianupload.php">Insert Guardian</a></li></br>
+  <li><a href="studentroster.php">Student Roster</a></li></br>
   <li><a href="studentquery.php">Search Students</a></li></br>
  <p>1</p>
 </div>
