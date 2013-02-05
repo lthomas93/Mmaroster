@@ -50,12 +50,12 @@ require_once('DB.php');
 
 <?php
 
-function query_db($First_name){
+function query_db1($First_name){
 require_once('db_login.php');
 require_once('DB.php');
 
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
-if (DB:isError($connection)){
+if (DB::isError($connection)){
   die("Could not query the database. </br>". DB::errorMessage($connection));
  }
 
@@ -75,7 +75,7 @@ if(DB::isError($result)); {
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
@@ -97,7 +97,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db($Age){
+function query_db2($Age){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -122,7 +122,7 @@ if (DB::isError($result){
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
@@ -143,7 +143,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db($Address){
+function query_db3($Address){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -168,7 +168,7 @@ if (DB::isError($result){
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
@@ -190,7 +190,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db($City){
+function query_db4($City){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -215,7 +215,7 @@ if (DB::isError($result){
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
@@ -237,7 +237,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db($Zip_code){
+function query_db5($Zip_code){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -262,7 +262,7 @@ if (DB::isError($result){
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
@@ -283,7 +283,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db($Phone_number){
+function query_db6($Phone_number){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -308,7 +308,7 @@ if (DB::isError($result){
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
@@ -330,7 +330,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db($Minor){
+function query_db7($Minor){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -355,7 +355,7 @@ if (DB::isError($result){
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
@@ -376,7 +376,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db($Guardian_id){
+function query_db8($Guardian_id){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -401,7 +401,7 @@ if (DB::isError($result){
 echo('<table border="1">');
 echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
 while ($result_row = $result->fetchrow()) {
-  echo "<tr><td>":
+  echo "<tr><td>";
   echo $result_row[0] . '</td><td>';
   echo $result_row[1] . '</td><td>';
   echo $result_row[2] . '</td><td>';
