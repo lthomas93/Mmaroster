@@ -31,7 +31,7 @@ $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_databa
     die ("Could not connect to the database!</br>".DB::errorMessage($connection));
     }
 
-$query = "SELECT * FROM student.roster";
+$query = "SELECT * FROM student_roster";
 $result = $connection->query($query);
   if (DB::isError($result)){
     die ("Could not query the database!</br>".DB::errorMessage($result));
@@ -39,7 +39,7 @@ $result = $connection->query($query);
 
 echo ('<table border="1">');
 echo ('<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>');
-  while ($result_row = $result-fetchrow()){
+  while ($result_row = $result->fetchrow()){
     echo "<tr><td>";
     echo $result_row[0] . '</td><td>';
     echo $result_row[1] . '</td><td>';
