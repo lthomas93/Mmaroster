@@ -38,12 +38,7 @@ $Last_name = $_POST["Last_name"];
   if ($Last_name !=NULL){
     echo "The search string is $Last_name."; 
       query_db($Last_name);
-}
-}
-else {
-     echo ('
-     <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>Last Name:    <input type="text" name="Last_name"/></label> <input type="submit" value="Go!" /> </form></pre>
-    ');
+ }
 }
 
 if (isset($_POST["First_name"])){
@@ -52,12 +47,8 @@ $First_name = $_POST["First_name"];
   if ($First_name !=NULL){
     echo "The search string is $First_name";
       query_db1($First_name);
+exit;
   }
-}
-else {
-      echo ('
-     <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>First Name:   <input type="text" name="First_name"/></label> <input type="submit" value="Go!" /> </form></pre>
-      ');
 }
 
 if (isset($_POST["Age"])){
@@ -68,11 +59,6 @@ $Age = $_POST["Age"];
      query_db2($Age);
  }
 }
-else {
-      echo ('
-      <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>Age:          <input type="text" name="Age"/></label> <input type="submit" value="Go!" /> </form></pre>
-      ');
-}
 
 if (isset($_POST["Address"])) {
 $Address = $_POST["Address"];
@@ -81,11 +67,6 @@ $Address = $_POST["Address"];
     echo "The search string is $Address";
       query_db3($Address);
   }
-}
-else {
-      echo ('
-      <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>Address:      <input type="text" name="Address"/></label> <input type="submit" value="Go!" /></form></pre>
-      ');
 }
 
 if (isset($_POST["City"])){
@@ -96,11 +77,6 @@ $City = $_POST["City"];
       query_db4($City);
   }
 }
-else {
-      echo ('
-     <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>City:         <input type="text" name="City"/></label> <input type="submit" value="Go!" /></form></pre>
-      ');
-}
 
 if (isset($_POST["State"])){
 $State = $_POST["State"];
@@ -109,11 +85,6 @@ $State = $_POST["State"];
     echo "The search string is $State";
       query_db5($State);
   }
-}
-else {
-      echo ('
-     <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>State:        <input type="text" name="State"/></label> <input type="submit" value="Go!" /></form></pre>
-      ');
 }
 
 if (isset($_POST["Zip_code"])){
@@ -124,11 +95,6 @@ $Zip_code = $_POST["Zip_code"];
       query_db6($Zip_code);
   }
 }
-else {
-      echo ('
-      <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>Zip code:     <input type="text" name="Zip_code"/></label> <input type="submit" value="Go!" /></form></pre>
-      ');
-}
 
 if (isset($_POST["Phone_number"])){
 $Phone_number = $_POST["Phone_number"];
@@ -137,11 +103,6 @@ $Phone_number = $_POST["Phone_number"];
     echo "The search string is $Phone_number";
       query_db7($Phone_number);
   }
-}
-else {
-      echo ('
-     <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>Phone Number: <input type="text" name="Phone_number"/><label> <input type="submit" value="Go!" /></form></pre>
-      ');
 }
 
 if (isset($_POST["Minor"])){
@@ -152,11 +113,6 @@ $Minor = $_POST["Minor"];
       query_db8($Minor);
   }
 }
-else {
-      echo ('
-     <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>Minor:        <input type="text" name="Minor"/></label> <input type="submit" value="Go!" /></form></pre>
-      ');
-}
 
 if (isset($_POST["Guardian_id"])){
 $Guardian_id = $_POST["Guardian_id"];
@@ -166,11 +122,23 @@ $Guardian_id = $_POST["Guardian_id"];
      query_db9($Guardian_id);
   }
 }
-else {
-      echo ('
-     <pre><form action="'.$_SERVER["PHP_SELF"].'" method="POST"><label>Guardian id:  <input type="text" name="Guardian_id"/></label> <input type="submit" value="Go!" /></form></pre>
+else{
+ echo ('
+<form action="'.$_SERVER["PHP_SELF"].'" method="POST">
+<pre><label>Last Name:    <input type="text" name="Last_name"/></label> <input type="submit" value="Search!"/></br>
+<label>First Name:   <input type="text" name="First_name"/></label> <input type="submit" value="Search!"/></br>
+<label>Age:          <input type="text" name="Age"/></label> <input type="submit" value="Search!"/></br>
+<label>Address:      <input type="text" name="Address"/></label> <input type="submit" value="Search!"/></br>
+<label>City:         <input type="text" name="City"/></label> <input type="submit" value="Search!"/></br>
+<label>State:        <input type="text" name="State"/></label> <input type="submit" value="Search!"/></br>
+<label>Zip Code:     <input type="text" name="Zip_Code"/></label> <input type="submit" value="Search!"/></br>
+<label>Phone number: <input type="text" name="Phone_number"/></label> <input type="submit" value="Search!"/></br>
+<label>Minor:        <input type="text" name="Minor"/></label> <input type="submit" value="Search!"/></br>
+<label>Guardian Id:  <input type="text" name="Guardian_id"/></label> <input type="submit" value="Search!"/</br>>
+</form></pre>
       ');
 }
+
 ?>
 
 </div>
