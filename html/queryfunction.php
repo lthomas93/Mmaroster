@@ -106,7 +106,7 @@ if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($et_magic_quotes_gpc()){
+if ($get_magic_quotes_gpc()){
   $Age = stripslashes($Age);
   }
 
@@ -115,7 +115,7 @@ $Age = mysql_real_escape_string($Age);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.Age LIKE '%$Age%'";
 $result= $connection->query($query);
-if (DB::isError($result){
+if (DB::isError($result)){
   die("Could not query the database.</br>". DB::errorMessage($result));
   }
     
@@ -139,7 +139,7 @@ echo ("</table>");
 $connection->disconnect();
 }
 
-
+?>
 
 <?php
 
@@ -152,7 +152,7 @@ if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($et_magic_quotes_gpc()){
+if ($get_magic_quotes_gpc()){
   $Address = stripslashes($Address);
   }
 
@@ -161,7 +161,7 @@ $Address = mysql_real_escape_string($Address);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.Address LIKE '%$Address%'";
 $result= $connection->query($query);
-if (DB::isError($result){
+if (DB::isError($result)){
   die("Could not query the database.</br>". DB::errorMessage($result));
   }
     
@@ -199,7 +199,7 @@ if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($et_magic_quotes_gpc()){
+if ($get_magic_quotes_gpc()){
   $City = stripslashes($City);
   }
 
@@ -208,7 +208,7 @@ $City = mysql_real_escape_string($City);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.City LIKE '%$City%'";
 $result= $connection->query($query);
-if (DB::isError($result){
+if (DB::isError($result)){
   die("Could not query the database.</br>". DB::errorMessage($result));
   }
     
@@ -234,10 +234,55 @@ $connection->disconnect();
 ?>
 
 
+<?php
+
+function query_db5($State){
+
+require_once('db_login.php');
+require_once('DB.php');
+$connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
+if (DB::isError($connection)){
+  die ("Could not query the database.</br>". DB::errorMessage($connection));
+  }
+
+if ($get_magic_quotes_gpc()){
+  $State = stripslashes($State);
+  }
+
+$State = htmlentities($State);
+$State = mysql_real_escape_string($State);
+
+$query = "SELECT * FROM student_roster WHERE student_roster.State LIKE '%$State%'";
+$result= $connection->query($query);
+if (DB::isError($result)){
+  die("Could not query the database.</br>". DB::errorMessage($result));
+  }
+
+echo('<table border="1">');
+echo("<tr><th>Student Id</th><th>Last Name</th><th>First Name</th><th>Age</th><th>Address</th><th>City</th><th>State</th><th>Zip Code</th><th>Phone Number</th><th>Minor</th><th>Guardian Id</th></tr>");
+while ($result_row = $result->fetchrow()) {
+  echo "<tr><td>";
+  echo $result_row[0] . '</td><td>';
+  echo $result_row[1] . '</td><td>';
+  echo $result_row[2] . '</td><td>';
+  echo $result_row[3] . '</td><td>';
+  echo $result_row[4] . '</td><td>';
+  echo $result_row[5] . '</td><td>';
+  echo $result_row[6] . '</td><td>';
+  echo $result_row[7] . '</td><td>';
+  echo $result_row[8] . '</td><td>';
+  echo $result_row[9] . '</td><td>';
+  echo $result_row[10] . '</td></tr>';
+  }
+echo ("</table>");
+$connection->disconnect();
+}
+?>
+
 
 <?php
 
-function query_db5($Zip_code){
+function query_db6($Zip_code){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -246,7 +291,7 @@ if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($et_magic_quotes_gpc()){
+if ($get_magic_quotes_gpc()){
   $Zip_code = stripslashes($Zip_code);
   }
 
@@ -255,7 +300,7 @@ $Zip_code = mysql_real_escape_string($Zip_code);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.Zip_code LIKE '%$Zip_code%'";
 $result= $connection->query($query);
-if (DB::isError($result){
+if (DB::isError($result)){
   die("Could not query the database.</br>". DB::errorMessage($result));
   }
     
@@ -283,7 +328,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db6($Phone_number){
+function query_db7($Phone_number){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -292,7 +337,7 @@ if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($et_magic_quotes_gpc()){
+if ($get_magic_quotes_gpc()){
   $Phone_number = stripslashes($Phone_number);
   }
 
@@ -301,7 +346,7 @@ $Phone_number = mysql_real_escape_string($Phone_number);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.Phone_number LIKE '%$Phone_number%'";
 $result= $connection->query($query);
-if (DB::isError($result){
+if (DB::isError($result)){
   die("Could not query the database.</br>". DB::errorMessage($result));
   }
     
@@ -330,7 +375,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db7($Minor){
+function query_db8($Minor){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -339,7 +384,7 @@ if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($et_magic_quotes_gpc()){
+if ($get_magic_quotes_gpc()){
   $Minor = stripslashes($Minor);
   }
 
@@ -348,7 +393,7 @@ $Minor = mysql_real_escape_string($Minor);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.Minor LIKE '%$Minor%'";
 $result= $connection->query($query);
-if (DB::isError($result){
+if (DB::isError($result)){
   die("Could not query the database.</br>". DB::errorMessage($result));
   }
     
@@ -376,7 +421,7 @@ $connection->disconnect();
 
 <?php
 
-function query_db8($Guardian_id){
+function query_db9($Guardian_id){
 
 require_once('db_login.php');
 require_once('DB.php');
@@ -385,7 +430,7 @@ if (DB::isError($connection)){
   die ("Could not query the database.</br>". DB::errorMessage($connection));
   }
   
-if ($et_magic_quotes_gpc()){
+if ($get_magic_quotes_gpc()){
 $Guardian_id = stripslashes($Guardian_id);
   }
 
@@ -394,7 +439,7 @@ $Guardian_id = mysql_real_escape_string($Guardian_id);
 
 $query = "SELECT * FROM student_roster WHERE student_roster.Guardian_id LIKE '%$Guardian_id%'";
 $result= $connection->query($query);
-if (DB::isError($result){
+if (DB::isError($result)){
   die("Could not query the database.</br>". DB::errorMessage($result));
   }
 
