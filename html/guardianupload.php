@@ -34,6 +34,10 @@ $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_databa
 require_once('insert2.php');
 require_once('loginverification.php');
 
+  if (isset($_POST["Guardian_id"])){
+$Guardian_id = $_POST["Guardian_id"];
+  }
+  
   if (isset($_POST["Last_name"])){
 $Last_name = $_POST["Last_name"];
   }
