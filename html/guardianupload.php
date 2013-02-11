@@ -11,12 +11,11 @@
 </div>
 
 <div id="left">
-<li><a href="#">Home</a></li></br>
-  <li><a href="studentupload.php">Insert Student</a></li></br>
-  <li><a href="guardianupload.php">Insert Guardian</a></li></br>
-  <li><a href="studentroster.php">Student Roster</a></li></br>
-  <li><a href="studentquery.php">Search Student</a></li></br>
- <p>1</p>
+<?php
+require_once('nav.php');
+nav_menu();
+?>
+
 </div>
 
 <div id="right">
@@ -27,10 +26,10 @@
 require_once('db_login.php');
 require_once('DB.php');
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
-  if(DB::isError($connection)){
-  die("Could not connect to the database: <br />" .DB::errorMessage($connection));
-  }
-  
+if(DB::isError($connection)){
+die("Could not connect to the database: <br />" .DB::errorMessage($connection));
+}
+
 require_once('insert2.php');
 require_once('loginverification.php');
 
