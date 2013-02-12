@@ -7,7 +7,7 @@
 
 
 <div id="top">
-<h1>Student Roster!</h1>
+<h1>Guardian Roster!</h1>
 </div>
 
 <div id="left">
