@@ -1,5 +1,4 @@
-<html>
-<head>
+d>
 <title>Student Query</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -35,7 +34,7 @@ if (isset($_POST["Last_name"])){
 $Last_name = $_POST["Last_name"];
 
   if ($Last_name !=NULL){
-    echo "The search string is $Last_name."; 
+    echo "The search string is $Last_name.";
       query_db($Last_name);
  }
 }
@@ -124,18 +123,18 @@ $Guardian_id = $_POST["Guardian_id"];
 else{
  echo ('
 <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
-<pre><label>Last Name:    <input type="text" name="Last_name"/></label> <input type="submit" value="Search!"/></br>
-<label>First Name:   <input type="text" name="First_name"/></label> <input type="submit" value="Search!"/></br>
-<label>Age:          <input type="text" name="Age"/></label> <input type="submit" value="Search!"/></br>
-<label>Address:      <input type="text" name="Address"/></label> <input type="submit" value="Search!"/></br>
-<label>City:         <input type="text" name="City"/></label> <input type="submit" value="Search!"/></br>
-<label>State:        <input type="text" name="State"/></label> <input type="submit" value="Search!"/></br>
-<label>Zip Code:     <input type="text" name="Zip_Code"/></label> <input type="submit" value="Search!"/></br>
+<pre><label>Last Name: <input type="text" name="Last_name"/></label> <input type="submit" value="Search!"/></br>
+<label>First Name: <input type="text" name="First_name"/></label> <input type="submit" value="Search!"/></br>
+<label>Age: <input type="text" name="Age"/></label> <input type="submit" value="Search!"/></br>
+<label>Address: <input type="text" name="Address"/></label> <input type="submit" value="Search!"/></br>
+<label>City: <input type="text" name="City"/></label> <input type="submit" value="Search!"/></br>
+<label>State: <input type="text" name="State"/></label> <input type="submit" value="Search!"/></br>
+<label>Zip Code: <input type="text" name="Zip_Code"/></label> <input type="submit" value="Search!"/></br>
 <label>Phone number: <input type="text" name="Phone_number"/></label> <input type="submit" value="Search!"/></br>
-<label>Minor:        <input type="text" name="Minor"/></label> <input type="submit" value="Search!"/></br>
-<label>Guardian Id:  <input type="text" name="Guardian_id"/></label> <input type="submit" value="Search!"/</br>>
+<label>Minor: <input type="text" name="Minor"/></label> <input type="submit" value="Search!"/></br>
+<label>Guardian Id: <input type="text" name="Guardian_id"/></label> <input type="submit" value="Search!"/></br>
 </form></pre>
-      ');
+');
 }
 
 ?>
@@ -143,4 +142,3 @@ else{
 </div>
 </body>
 </html>
-
