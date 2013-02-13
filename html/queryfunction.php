@@ -140,6 +140,7 @@ while ($result_row = $result->fetchrow()) {
   }
 echo ("</table>");
 $connection->disconnect();
+exit;
 }
 
 ?>
