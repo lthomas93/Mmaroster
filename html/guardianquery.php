@@ -1,4 +1,5 @@
-d>
+<html>
+<head>
 <title>Student Query</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -97,7 +98,7 @@ $State = $_POST["State"];
 if (isset($_POST["Zip_code"])){
 $Zip_code = $_POST["Zip_code"];
 
-  if($Zip_code !=NULL) {
+  if ($Zip_code !=NULL) {
     echo "The search string is $Zip_code";
       query_db7($Zip_code);
   }
@@ -124,7 +125,7 @@ else{
 <label>Address:      <input type="text" name="Address"/></label> <input type="submit" value="Search!"/></br>
 <label>City:         <input type="text" name="City"/></label> <input type="submit" value="Search!"/></br>
 <label>State:        <input type="text" name="State"/></label> <input type="submit" value="Search!"/></br>
-<label>Zip Code:     <input type="text" name="Zip_Code"/></label> <input type="submit" value="Search!"/></br>
+<label>Zip Code:     <input type="text" name="Zip_code"/></label> <input type="submit" value="Search!"/></br>
 <label>Phone number: <input type="text" name="Phone_number"/></label> <input type="submit" value="Search!"/></br>
 </form></pre>
       ');
@@ -135,6 +136,3 @@ else{
 </div>
 </body>
 </html>
-
-                                                                                                                             139,0-1       Bot
-
