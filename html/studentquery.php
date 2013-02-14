@@ -129,7 +129,7 @@ else{
 <label>Address: <input type="text" name="Address"/></label> <input type="submit" value="Search!"/></br>
 <label>City: <input type="text" name="City"/></label> <input type="submit" value="Search!"/></br>
 <label>State: <input type="text" name="State"/></label> <input type="submit" value="Search!"/></br>
-<label>Zip Code: <input type="text" name="Zip_Code"/></label> <input type="submit" value="Search!"/></br>
+<label>Zip Code: <input type="text" name="Zip_code"/></label> <input type="submit" value="Search!"/></br>
 <label>Phone number: <input type="text" name="Phone_number"/></label> <input type="submit" value="Search!"/></br>
 <label>Minor: <input type="text" name="Minor"/></label> <input type="submit" value="Search!"/></br>
 <label>Guardian Id: <input type="text" name="Guardian_id"/></label> <input type="submit" value="Search!"/></br>
