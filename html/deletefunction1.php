@@ -14,7 +14,7 @@ function delete_student($Student_id)
 
 
 
-	$query = "DELETE FROM student_roster WHERE Student_id LIKE '_$Student_id_'";
+	$query = "DELETE FROM student_roster WHERE Student_id LIKE '$Student_id'";
 	$result= $connection->query($query);
 	if (DB::isError($result))
 	{
@@ -22,8 +22,25 @@ function delete_student($Student_id)
 
 	}
 
+}
 
-/*	$query = "SELECT * FROM student_roster";
+function query_students()
+{
+        require_once ('db_login.php');
+        require_once('DB.php');
+
+        global $db_username, $db_password, $db_host, $db_database;
+        $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
+        if(DB::isError($connection))
+        {
+                die("Could not connect to the database:<br />".DB::errorMessage($connection));
+        }
+
+
+
+
+
+	$query = "SELECT * FROM student_roster";
 	$result= $connection->query($query);
 	if (DB::isError($result))
 	{
@@ -59,7 +76,15 @@ function delete_student($Student_id)
 	        echo $result_row[9] . '</td><td>';
 		echo $result_row[10] . '</td></tr>';
 	}
-	echo ("</table>");*/
+	echo ("</table>");
+
+	echo
+	('
+        <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
+        <pre><label>Student Id: <input type="text" name="Student_id"/></label> <input type="submit" value="Delete!"/></br></pre>
+        </form>
+	');
+
 }
 ?>
 
