@@ -10,6 +10,7 @@ function nav_menu()
 		<li><a href="studentdeletion.php">Delete Students</a></li></br> 	
 		<li><a href="guardianroster.php">Guardian Roster</a></li></br>
 		<li><a href="guardianquery.php">Search Guardians</a></li></br>
-	     ');
+		<li><a href="guardiandeletion.php">Delete Guardians</a></li></br>
+	      ');
 }
 ?>
