@@ -79,7 +79,7 @@ echo ("</table>");
 echo
 ('
     <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
-    <pre><label>Student Id: <input type="text" name="Student_id"/></label> <input type="submit" value="Delete!"/></br></pre>
+    <pre><label>Guardian Id: <input type="text" name="Guardian_id"/></label> <input type="submit" value="Delete!"/></br></pre>
     </form>
 ');
 
