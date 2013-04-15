@@ -11,8 +11,8 @@
 
 <div id="left">
 <?php
-require_once('nav.php');
-nav_menu();
+	require_once('nav.php');
+	nav_menu();
 ?>
 </div>
 
@@ -25,96 +25,115 @@ nav_menu();
 require_once ('db_login.php');
 require_once('DB.php');
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
-  if(DB::isError($connection)){
-  die("Could not connect to the database:<br />".DB::errorMessage($connection));
-  }
+if(DB::isError($connection))
+{
+	die("Could not connect to the database:<br />".DB::errorMessage($connection));
+}
 
 require_once('queryfunction2.php');
 
-if (isset($_POST["Guardian_id"])){
-$Guardian_id = $_POST["Guardian_id"];
+if (isset($_POST["Guardian_id"]))
+{
+	$Guardian_id = $_POST["Guardian_id"];
 
-  if($Guardian_id !=NULL){
-    echo "The search string is $Guardian_id";
-     query_db($Guardian_id);
-  }
+	if($Guardian_id !=NULL)
+	{
+		echo "The search string is $Guardian_id";
+		query_db($Guardian_id);
+	}
 }
 
-if (isset($_POST["Last_name"])){
-$Last_name = $_POST["Last_name"];
+if (isset($_POST["Last_name"]))
+{
+	$Last_name = $_POST["Last_name"];
 
-  if ($Last_name !=NULL){
-    echo "The search string is $Last_name.";
-      query_db1($Last_name);
- }
+	if ($Last_name !=NULL)
+	{
+		echo "The search string is $Last_name.";
+		query_db1($Last_name);
+	}
 }
 
-if (isset($_POST["First_name"])){
-$First_name = $_POST["First_name"];
+if (isset($_POST["First_name"]))
+{
+	$First_name = $_POST["First_name"];
 
-  if ($First_name !=NULL){
-    echo "The search string is $First_name";
-      query_db2($First_name);
-exit;
-  }
+	if ($First_name !=NULL)
+	{
+		echo "The search string is $First_name";
+		query_db2($First_name);
+		exit;
+	}
 }
 
-if (isset($_POST["Age"])){
-$Age = $_POST["Age"];
+if (isset($_POST["Age"]))
+{
+	$Age = $_POST["Age"];
 
- if ($Age !=NULL){
-   echo "The search string is $Age";
-     query_db3($Age);
- }
+	if ($Age !=NULL)
+	{
+		echo "The search string is $Age";
+		query_db3($Age);
+	}
 }
 
-if (isset($_POST["Address"])) {
-$Address = $_POST["Address"];
+if (isset($_POST["Address"]))
+{
+	$Address = $_POST["Address"];
 
-  if ($Address !=NULL){
-    echo "The search string is $Address";
-      query_db4($Address);
-  }
+	if ($Address !=NULL)
+	{
+		echo "The search string is $Address";
+		query_db4($Address);
+	}
 }
 
-if (isset($_POST["City"])){
-$City = $_POST["City"];
+if (isset($_POST["City"]))
+{
+	$City = $_POST["City"];
 
-  if ($City !=NULL){
-    echo "The search string is $City";
-      query_db5($City);
-  }
+	if ($City !=NULL)
+	{
+		echo "The search string is $City";
+		query_db5($City);
+	}
 }
 
-if (isset($_POST["State"])){
-$State = $_POST["State"];
+if (isset($_POST["State"]))
+{
+	$State = $_POST["State"];
 
-  if ($State !=NULL){
-    echo "The search string is $State";
-      query_db6($State);
-  }
+	if ($State !=NULL)
+	{
+		echo "The search string is $State";
+		query_db6($State);
+	}
 }
 
-if (isset($_POST["Zip_code"])){
-$Zip_code = $_POST["Zip_code"];
+if (isset($_POST["Zip_code"]))
+{
+	$Zip_code = $_POST["Zip_code"];
 
-  if ($Zip_code !=NULL) {
-    echo "The search string is $Zip_code";
-      query_db7($Zip_code);
-  }
+	if ($Zip_code !=NULL)
+	{
+		echo "The search string is $Zip_code";
+		query_db7($Zip_code);
+	}
 }
 
-if (isset($_POST["Phone_number"])){
-$Phone_number = $_POST["Phone_number"];
+if (isset($_POST["Phone_number"]))
+{
+	$Phone_number = $_POST["Phone_number"];
 
-  if($Phone_number !=NULL){
-    echo "The search string is $Phone_number";
-      query_db8($Phone_number);
-  }
+	if($Phone_number !=NULL)
+	{
+		echo "The search string is $Phone_number";
+		query_db8($Phone_number);
+	}
 }
 
 
-
+//Section of code left unclean due to css code
 else{
  echo ('
 <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
