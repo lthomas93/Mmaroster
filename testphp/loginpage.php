@@ -12,7 +12,7 @@ if (DB::isError($connection))
 
 if (isset($_POST['submit']))
 {
-	if (isset($Username) || isset($Password));
+	if (isset($Last_name) || isset($First_name));
 	{
 		loginpage();
 	}
@@ -22,10 +22,10 @@ else
 {
 	echo
 	"<form type='sessionex1.php' method='POST'>
-	<label>Username: </label><br>
-	<input type='text' name='Username'><br>
-	<label>Password: <br>
-	<input type='text' name='Last_name'></label?<br>
+	<label>Last name: </label><br>
+	<input type='text' name='Last_name'><br>
+	<label>First Name: <br>
+	<input type='text' name='First_name'></label?<br>
 	<label>Login!</label><input type='submit' name='submit' value='login'>
 	</form>";
 }
