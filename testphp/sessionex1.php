@@ -67,7 +67,8 @@ session_start();
 
 	else
 	{
-		echo 
+		echo
+		(' 
 			"<form type="'$_SERVER["PHP_SELF"]'" method="POST">
 			<label>Last Name: </label><br>
 			<input type="text" name="Last_name"><br>
@@ -75,7 +76,7 @@ session_start();
 			<input type="text" name="First_name"></label?<br>
 			<label>Login!</label><input type="submit" name="submit" value="login">
 			</form>";
-
+		')
 	}
 //}
 ?>
