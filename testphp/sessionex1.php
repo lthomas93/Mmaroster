@@ -24,7 +24,7 @@ function loginpage()
 //	{
 	//	$Username = mysql_real_escape_string($_POST['Username']);
 	//	$Password = mysql_real_escape_string($_POST['Password']);
-	//	$md5pass=md5($Password);
+	//	$md5password=md5($Password);
 		$query = "SELECT * FROM student_roster  WHERE Last_name= '".$Last_name."' AND First_name= '".$First_name."'";//changed password to last name for test purposes
 		$result=$connection->query($query);
 		if (DB::isError($result))
@@ -67,9 +67,9 @@ function loginpage()
 	{
 		echo 
 			"<form type='sessionex1.php' method='POST'>
-			<label>Username: </label><br>
+			<label>Last Name: </label><br>
 			<input type='text' name='Last_name'><br>
-			<label>Password: <br>
+			<label>First Name: <br>
 			<input type='text' name='First_name'></label?<br>
 			<label>Login!</label><input type='submit' name='submit' value='login'>
 			</form>";
