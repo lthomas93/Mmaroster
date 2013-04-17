@@ -75,8 +75,8 @@ session_start();
 			<label>First Name: <br>
 			<input type="text" name="First_name"></label?<br>
 			<label>Login!</label><input type="submit" name="submit" value="login">
-			</form>";
-		')
+			</form>"
+		');
 	}
 //}
 ?>
