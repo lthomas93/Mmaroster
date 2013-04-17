@@ -25,7 +25,7 @@ function loginpage()
 	//	$Username = mysql_real_escape_string($_POST['Username']);
 	//	$Password = mysql_real_escape_string($_POST['Password']);
 	//	$md5password=md5($Password);
-	$query = "SELECT * FROM student_roster  WHERE Last_name LIKE '"%$Last_name%"' AND First_name LIKE '"%$First_name%"'";//changed password to last name for test purposes
+	$query = "SELECT * FROM student_roster  WHERE Last_name='.$Last_name.' AND First_name='.$First_name.'";//changed password to last name for test purposes
 		$result=$connection->query($query);
 		if (DB::isError($result))
 		{
