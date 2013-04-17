@@ -23,7 +23,7 @@ if (isset($_POST['submit']))
 else
 {
 	echo
-	('<form type="'.$_SERVER["PHP_SELF"].'" method="POST">
+	('<form type="'$_SERVER["PHP_SELF"]'" method="POST">
 	<label>Last name: </label><br>
 	<input type="text" name="Last_name"><br>
 	<label>First Name: <br>
