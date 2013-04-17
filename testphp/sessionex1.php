@@ -1,7 +1,7 @@
 <?php
 session_start();
-function loginpage()
-{
+//function loginpage()
+//{
 	require_once('dblogin.php');
 	require_once('DB.php');
 
@@ -20,8 +20,8 @@ function loginpage()
 	//}
 
 
-//	if (isset($_POST['submit']))
-//	{
+	if (isset($_POST['submit']))
+	{
 	//	$Username = mysql_real_escape_string($_POST['Username']);
 	//	$Password = mysql_real_escape_string($_POST['Password']);
 	//	$md5password=md5($Password);
@@ -62,20 +62,20 @@ function loginpage()
 	//		$_SESSION['name'] = $Username;
 			header("http://localhost/lthomas/html/guardianupload.php");
 		}
-//	}
+	}
 
 
-/*	else
+	else
 	{
 		echo 
-			"<form type='sessionex1.php' method='POST'>
+			"<form type="'$_SERVER["PHP_SELF"]'" method="POST">
 			<label>Last Name: </label><br>
-			<input type='text' name='Last_name'><br>
+			<input type="text" name="Last_name"><br>
 			<label>First Name: <br>
-			<input type='text' name='First_name'></label?<br>
-			<label>Login!</label><input type='submit' name='submit' value='login'>
+			<input type="text" name="First_name"></label?<br>
+			<label>Login!</label><input type="submit" name="submit" value="login">
 			</form>";
 
-	}*/
-}
+	}
+//}
 ?>
