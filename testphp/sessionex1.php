@@ -69,7 +69,7 @@ session_start();
 	{
 		echo
 		(' 
-			"<form type="'$_SERVER["PHP_SELF"]'" method="POST">
+			<form type="'$_SERVER["PHP_SELF"]'" method="POST">
 			<label>Last Name: </label><br>
 			<input type="text" name="Last_name"><br>
 			<label>First Name: <br>
