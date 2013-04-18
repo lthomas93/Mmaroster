@@ -1,3 +1,4 @@
+<html>
 <?php
 session_start();
 //function loginpage()
@@ -6,7 +7,7 @@ session_start();
 	require_once('DB.php');
 
 
-	global $db_username, $db_password, $db_host, $db_database;
+//	global $db_username, $db_password, $db_host, $db_database;
 	$connection=DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 	if (DB::isError($connection))
 	{
@@ -65,11 +66,11 @@ session_start();
 	}
 
 
-	else
-	{
+//	else
+//	{
 		echo
 		(' 
-			<form type="'$_SERVER["PHP_SELF"]'" method="POST">
+			<form type=\"'.$_SERVER["PHP_SELF"].'\" method=\"POST\">
 			<label>Last Name: </label><br>
 			<input type="text" name="Last_name"><br>
 			<label>First Name: <br>
@@ -77,6 +78,7 @@ session_start();
 			<label>Login!</label><input type="submit" name="submit" value="login">
 			</form>"
 		');
-	}
+//	}
 //}
 ?>
+</html>
