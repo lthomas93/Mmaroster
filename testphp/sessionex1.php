@@ -68,16 +68,13 @@ session_start();
 
 //	else
 //	{
-		echo
-		(' 
-			<form type=\"'.$_SERVER[\"PHP_SELF"].'\" method=\"POST\">
-			<label>Last Name: </label><br>
-			<input type=\"text\" name=\"Last_name\"><br>
-			<label>First Name: <br>
-			<input type=\"text\" name=\"First_name\"></label?<br>
-			<label>Login!</label><input type=\"submit\" name=\"submit\" value=\"login\">
-			</form>"
-		');
+		echo '<form type="'.$_SERVER["PHP_SELF"].'" method=\"POST\">';
+		echo '<label>Last Name: </label><br>';
+		echo '<input type="text" name="Last_name"><br>';
+		echo '<label>First Name: <br>';
+		echo '<input type="text" name="First_name"></label><br>';
+		echo '<label>Login!</label><input type="submit" name=\"submit\" value=\"login\"></form>';    
+
 //	}
 //}
 ?>
