@@ -73,7 +73,7 @@ session_start();
 		echo '<input type="text" name="Last_name"><br>';
 		echo '<label>First Name: <br>';
 		echo '<input type="text" name="First_name"></label><br>';
-		echo '<label>Login!</label><input type="submit" name=\"submit\" value=\"login\"></form>';    
+		echo '<label>Login!</label><input type="submit" name="submit" value="login"></form>';    
 
 //	}
 //}
