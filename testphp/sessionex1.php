@@ -70,12 +70,12 @@ session_start();
 //	{
 		echo
 		(' 
-			<form type=\"'.$_SERVER["PHP_SELF"].'\" method=\"POST\">
+			<form type=\"'.$_SERVER[\"PHP_SELF"].'\" method=\"POST\">
 			<label>Last Name: </label><br>
-			<input type="text" name="Last_name"><br>
+			<input type=\"text\" name=\"Last_name\"><br>
 			<label>First Name: <br>
-			<input type="text" name="First_name"></label?<br>
-			<label>Login!</label><input type="submit" name="submit" value="login">
+			<input type=\"text\" name=\"First_name\"></label?<br>
+			<label>Login!</label><input type=\"submit\" name=\"submit\" value=\"login\">
 			</form>"
 		');
 //	}
