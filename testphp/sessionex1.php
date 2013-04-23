@@ -28,29 +28,13 @@ function loginpage($Last_name,$First_name)
 	//	$md5password=md5($Password);
 	//$Last_name=NULL;
 	//$First_name=NULL;
-	$query = "SELECT * FROM student_roster WHERE Last_name='$Last_name' AND First_name='$First_name'";//changed password to last name for test purposes
+		$query = "SELECT * FROM student_roster WHERE Last_name='$Last_name' AND First_name='$First_name'";//changed password to last name for test purposes
 		$result=$connection->query($query);
 		if (DB::isError($result))
 		{
 			die ("Could not query the database. <br />" .$query." ".DB::errorMessage($result));
 		}
-		echo('<table border="1">');
-		echo("<tr><th>Instructor Id</th><th>Username</th><th>Password</th><th>Last name</th><th>First name</th><th>School name</th><th>Phone number</th><th>Email</tr></th>");
-		while ($result_row = $result->fetchrow())
-		{
-			echo "<tr><td>";
-     			echo $result_row[0] . '</td><td>';
-     			echo $result_row[1] . '</td><td>';
-     			echo $result_row[2] . '</td><td>';
-     			echo $result_row[3] . '</td><td>';
-     			echo $result_row[4] . '</td><td>';
-        		echo $result_row[5] . '</td><td>';
-        		echo $result_row[6] . '</td><td>';
-        		echo $result_row[7] . '</td><td>';
-        		echo $result_row[8] . '</td></tr>';
-		}
 		$verify = $result->numRows();
-		echo "$verify";
 		if ($verify == "1")
 		{
 			echo "Password and username was correct!";
@@ -63,18 +47,6 @@ function loginpage($Last_name,$First_name)
 			die("Password or username was incorrect!");	
 		}
 	}
-
-
-/*	else
-	{
-		echo '<form type="'.$_SERVER["PHP_SELF"].'" method="POST">';
-		echo '<label>Last Name: </label><br>';
-		echo '<input type="text" name="Last_name"><br>';
-		echo '<label>First Name: <br>';
-		echo '<input type="text" name="First_name"></label><br>';
-		echo '<label>Login!</label><input type="submit" name="submit" value="login"></form>';    
-
-	}*/
 }
 ?>
 </html>
