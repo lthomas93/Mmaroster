@@ -10,25 +10,36 @@ if (DB::isError($connection))
 }
 
 
-if (isset($_POST['submit']))
+if (isset($_POST["Last_name"]))
 {
-	if (isset($Last_name) || isset($First_name))
+	$Last_name = $_POST["Last_name"];
+}
+
+if (isset($_POST["First_name"]))
+{
+	$First_name = $_POST["First_name"];
+}
+
+if (isset($Last_name) && isset($First_name))
+{
+	(($Last_name !=NULL) && ($First_name != NULL));
+	
+	if (($Last_name !=NULL) && ($First_name != NULL))
 	{
-	$Last_name=NULL;
-	$First_name=NULL;	
-	loginpage();
+		loginpage($Last_name,$First_name);
 	}
 }
 
 else
 {
-	echo
-	('<form type="'$_SERVER["PHP_SELF"]'" method="POST">
-	<label>Last name: </label><br>
-	<input type="text" name="Last_name"><br>
-	<label>First Name: <br>
-	<input type="text" name="First_name"></label?<br>
-	<label>Login!</label><input type="submit" name="submit" value="login">
-	</form>');
+
+//	echo '<form type="'.$_SERVER["PHP_SELF"].'" method="POST">';
+	echo '<form type="localhost/lthomas/Mmaroster/testphp/sessionex1.php" method="POST">';
+	echo '<label>Last name: </label><br>';
+	echo '<input type="text" name="Last_name"><br>';
+	echo '<label>First Name: <br>';
+	echo '<input type="text" name="First_name"></label?<br>';
+	echo '<label>Login!</label><input type="submit" name="submit" value="login">';
+	echo '</form>';
 }
 ?>
