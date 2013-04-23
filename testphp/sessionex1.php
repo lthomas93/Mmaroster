@@ -1,13 +1,13 @@
 <html>
 <?php
 session_start();
-//function loginpage()
-//{
+function loginpage($Last_name,$First_name)
+{
 	require_once('dblogin.php');
 	require_once('DB.php');
 
 
-//	global $db_username, $db_password, $db_host, $db_database;
+	global $db_username, $db_password, $db_host, $db_database;
 	$connection=DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 	if (DB::isError($connection))
 	{
@@ -28,7 +28,7 @@ session_start();
 	//	$md5password=md5($Password);
 	//$Last_name=NULL;
 	//$First_name=NULL;
-	$query = "SELECT * FROM student_roster  WHERE Last_name='$Last_name' AND First_name='$First_name'";//changed password to last name for test purposes
+	$query = "SELECT * FROM student_roster WHERE Last_name='$Last_name' AND First_name='$First_name'";//changed password to last name for test purposes
 		$result=$connection->query($query);
 		if (DB::isError($result))
 		{
@@ -53,29 +53,27 @@ session_start();
 		echo "$verify";
 		if ($verify == "1")
 		{
-			echo "Password or username was incorrect!";
-	//		die("Password or username was incorrect!");
+			echo "Password and username was correct!";
+//			$_SESSION['loggedin'] = "YES";
+//			$_SESSION['name'] = "$Username";
 		}
 		else
 		{
-			echo "Password was correct";
-	//		$_SESSION['loggedin'] = "YES";
-	//		$_SESSION['name'] = $Username;
-			header("http://localhost/lthomas/html/guardianupload.php");
+			die("Password or username was incorrect!");	
 		}
 	}
 
 
-//	else
-//	{
-		echo '<form type="'.$_SERVER["PHP_SELF"].'" method=\"POST\">';
+/*	else
+	{
+		echo '<form type="'.$_SERVER["PHP_SELF"].'" method="POST">';
 		echo '<label>Last Name: </label><br>';
 		echo '<input type="text" name="Last_name"><br>';
 		echo '<label>First Name: <br>';
 		echo '<input type="text" name="First_name"></label><br>';
 		echo '<label>Login!</label><input type="submit" name="submit" value="login"></form>';    
 
-//	}
-//}
+	}*/
+}
 ?>
 </html>
