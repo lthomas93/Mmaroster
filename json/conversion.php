@@ -1,40 +1,40 @@
 <?php
-$jsonDocument = '{
+$jsondata = '{
 
-"after": 1481a2de7b2a7d02428ad93446ab166be7793fbb,
+"after":"1481a2de7b2a7d02428ad93446ab166be7793fbb",
 
-"before":17c497ccc7cca9c2f735aa07e9e3813060ce9a6a,
-"commits:[
+"before":"17c497ccc7cca9c2f735aa07e9e3813060ce9a6a",
+"commits":[
 {
 "added":[
 
 ],
 "author":{
 
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "committer":{
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "distinct":true,
-"id":c441029cf673f84c8b7db52d0a5944ee5c52ff89,
+"id":"c441029cf673f84c8b7db52d0a5944ee5c52ff89",
 
-"message":Test,
+"message":"Test",
 "modified":[
 "README.md"
 ],
 "removed":[
 
 ],
-"timestamp":2013-02-22T13:50:07-08:00,
+"timestamp":"2013-02-22T13:50:07-08:00",
 
-"url":https://github.com/octokitty/testing/commit/c441029cf673f84c8b7db52d0a5944ee5c52ff89
+"url":"https://github.com/octokitty/testing/commit/c441029cf673f84c8b7db52d0a5944ee5c52ff89"
 
 },
 {
@@ -43,21 +43,21 @@ $jsonDocument = '{
 ],
 "author":{
 
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "committer":{
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "distinct":true,
-"id":36c5f2243ed24de58284a96f2a643bed8c028658,
+"id":"36c5f2243ed24de58284a96f2a643bed8c028658",
 
-"message":This is me testing the windows client.,
+"message":"This is me testing the windows client.",
 
 "modified":[
 "README.md"
@@ -65,9 +65,9 @@ $jsonDocument = '{
 ],
 "removed":[
 ],
-"timestamp":2013-02-22T14:07:13-08:00,
+"timestamp":"2013-02-22T14:07:13-08:00",
 
-"url":https://github.com/octokitty/testing/commit/36c5f2243ed24de58284a96f2a643bed8c028658
+"url":"https://github.com/octokitty/testing/commit/36c5f2243ed24de58284a96f2a643bed8c028658"
 
 },
 {
@@ -76,21 +76,21 @@ $jsonDocument = '{
 "words/madame-bovary.txt"
 ],
 "author":{
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "committer":{
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "distinct":true,
 "id":"1481a2de7b2a7d02428ad93446ab166be7793fbb",
 
-"message":Rename madame-bovary.txt to words/madame-bovary.txt,
+"message":"Rename madame-bovary.txt to words/madame-bovary.txt",
 
 "modified":[
 ],
@@ -98,13 +98,13 @@ $jsonDocument = '{
 "madame-bovary.txt"
 
 ],
-"timestamp":2013-03-12T08:14:29-07:00,
+"timestamp":"2013-03-12T08:14:29-07:00",
 
-"url":https://github.com/octokitty/testing/commit/1481a2de7b2a7d02428ad93446ab166be7793fbb
+"url":"https://github.com/octokitty/testing/commit/1481a2de7b2a7d02428ad93446ab166be7793fbb"
 
 }
 ],
-"compare":https://github.com/octokitty/testing/compare/17c497ccc7cc...1481a2de7b2a,
+"compare":"https://github.com/octokitty/testing/compare/17c497ccc7cc...1481a2de7b2a",
 
 "created":false,
 "deleted":false,
@@ -116,21 +116,21 @@ $jsonDocument = '{
 "words/madame-bovary.txt"
 ],
 "author":{
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "committer":{
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":Garen Torikian,
-"username":octokitty
+"name":"Garen Torikian",
+"username":"octokitty"
 },
 "distinct":true,
-"id":1481a2de7b2a7d02428ad93446ab166be7793fbb,
+"id":"1481a2de7b2a7d02428ad93446ab166be7793fbb",
 
-"message":Rename madame-bovary.txt to words/madame-bovary.txt,
+"message":"Rename madame-bovary.txt to words/madame-bovary.txt",
 
 "modified":[
 ],
@@ -138,19 +138,19 @@ $jsonDocument = '{
 "madame-bovary.txt"
 
 ],
-"timestamp":2013-03-12T08:14:29-07:00,
+"timestamp":"2013-03-12T08:14:29-07:00",
 
-"url":https://github.com/octokitty/testing/commit/1481a2de7b2a7d02428ad93446ab166be7793fbb
+"url":"https://github.com/octokitty/testing/commit/1481a2de7b2a7d02428ad93446ab166be7793fbb"
 
 },
 "pusher":{
-"name":none
+"name":"none"
 },
-"ref":refs/heads/master,
+"ref":"refs/heads/master",
 "repository":{
 
 "created_at":1332977768,
-"description":,
+"description":"",
 "fork":false,
 
 "forks":0,
@@ -158,19 +158,19 @@ $jsonDocument = '{
 
 "has_issues":true,
 "has_wiki":true,
-"homepage":,
+"homepage":"",
 
 "id":3860742,
-"language":Ruby,
-"master_branch":master,
+"language":"Ruby",
+"master_branch":"master",
 
-"name":testing,
+"name":"testing",
 "open_issues":2,
 "owner":{
 
-"email":lolwut@noway.biz,
+"email":"lolwut@noway.biz",
 
-"name":octokitty
+"name":"octokitty"
 },
 
 "private":false,
@@ -178,11 +178,13 @@ $jsonDocument = '{
 "size":2156,
 
 "stargazers":1,
-"url":https://github.com/octokitty/testing,
+"url":"https://github.com/octokitty/testing",
 "watchers":1
 }
 }
 ';
+
+
 
 
 
@@ -193,6 +195,7 @@ if (isset($_POST["jsondata"]))
 	$jsondata = $_POST["jsondata"];
 	if ($jsondata = $_POST["jsondata"])
 	{
+//		var_dump(json_decode($jsondata));
 		var_dump(json_decode($jsondata, true));
 	}
 }
