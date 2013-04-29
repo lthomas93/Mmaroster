@@ -1,4 +1,5 @@
 <?php
+require_once('array.php');
 $jsondata = '{
 
 "after":"1481a2de7b2a7d02428ad93446ab166be7793fbb",
@@ -197,6 +198,8 @@ if (isset($_POST["jsondata"]))
 	{
 //		var_dump(json_decode($jsondata));
 		var_dump(json_decode($jsondata, true));
+		echo '</br></br></br></br>';
+		username();
 	}
 }
 ?>
