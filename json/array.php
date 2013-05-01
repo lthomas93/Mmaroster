@@ -1,7 +1,9 @@
 <?php
 function username()
 {
-$decodedJsondata = json_decode($jsondata, true);
+global $jsondata;
+$decodedJsondata['username'] = var_dump(json_decode($jsondata, true));
 $username = $decodedJsondata['username'];
+//$decodedJsondata['username'] = var_dump(json_decode($jsondata,true));
 }
 ?>
