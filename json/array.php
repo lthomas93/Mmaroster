@@ -136,22 +136,11 @@ function branch()
 
 if (isset($_POST["jsondata"]))
 {
-        $jsondata = $_POST["jsondata"];
-        if ($jsondata = $_POST["jsondata"])
-        {
-// is the object version of this file.          var_dump(json_decode($jsondata));
-                var_dump(json_decode($jsondata, true));
-                echo '<BR><BR><BR>';
                 username();
-                echo "<BR><BR><BR>";
                 modified();
-                echo "<BR><BR><BR>";
                 removed();
-                echo "<BR><BR><BR>";
                 added();
-                echo "<BR><BR><BR>";
                 branch();
-        }
 }
 
 ?>
