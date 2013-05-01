@@ -7,7 +7,7 @@ $username = $decodedJsondata['username'];
 //print_r($username);
 	while (list($a, $b) = each($username))
 	{
-		echo "$b </br>";
+	//	echo "$b </br>";
 		while (list($c, $d) = each($b))
 		{
 			while (list($e, $f) = each($d))
