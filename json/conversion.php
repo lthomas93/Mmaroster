@@ -202,6 +202,12 @@ if (isset($_POST["jsondata"]))
 		username();
 		echo "<BR><BR><BR>";
 		modified();
+		echo "<BR><BR><BR>";
+		removed();
+		echo "<BR><BR><BR>";
+		added();
+		echo "<BR><BR><BR>";
+		branch();
 	}
 }
 ?>
