@@ -1,11 +1,9 @@
 <?php
 function username()
 {
-	global $jsondata;
-	$decodedJsondata['username'] = json_decode($jsondata, true);
-	$username = $decodedJsondata['username'];
+	global $decodedJsondata;
 	
-	while (list($a, $b) = each($username))
+	while (list($a, $b) = each($decodedJsondata))
         {
                 while (list($c, $d) = each($b))
                 {
@@ -29,11 +27,9 @@ function username()
 
 function modified()
 {
-	global $jsondata;
-	$decodedJsondata['modified'] = json_decode($jsondata, true);
-	$modified = $decodedJsondata['modified'];
+	global $decodedJsondata;
 		
-	while (list($a, $b) = each($modified))
+	while (list($a, $b) = each($decodedJsondata))
 	{
 		while (list($c, $d) = each($b))
 		{
@@ -57,11 +53,9 @@ function modified()
 
 function removed()
 {
-        global $jsondata;
-        $decodedJsondata['removed'] = json_decode($jsondata, true);
-        $removed = $decodedJsondata['removed'];
+        global $decodedJsondata;
 
-        while (list($a, $b) = each($removed))
+        while (list($a, $b) = each($decodedJsondata))
         {
                 while (list($c, $d) = each($b))
                 {
@@ -84,11 +78,9 @@ function removed()
 
 function added()
 {
-        global $jsondata;
-        $decodedJsondata['added'] = json_decode($jsondata, true);
-        $added = $decodedJsondata['added'];
-
-        while (list($a, $b) = each($added))
+        global $decodedJsondata;
+        
+	while (list($a, $b) = each($decodedJsondata))
         {
                 while (list($c, $d) = each($b))
                 {
@@ -111,16 +103,12 @@ function added()
 
 function branch()
 {
-	global $jsondata;
-	$decodedJsondata['branch'] = json_decode($jsondata, true);
-	$branch = $decodedJsondata['branch'];
+	global $decodedJsondata;
 	
-	while (list($a, $b) = each ($branch))
+	while (list($a, $b) = each ($decodedJsondata))
 	{
-		//echo "$b <BR>";
 		if ($a =="repository")
 		{
-			//echo "$b";
 			while (list($c, $d) = each($b))
 			{
 				if ($c == "master_branch")
@@ -134,13 +122,17 @@ function branch()
 
 
 
-if (isset($_POST["jsondata"]))
+if (!isset($_POST["jsondata"]))
 {
-                username();
-                modified();
-                removed();
-                added();
-                branch();
+	exit();
 }
+
+$decodedJsondata = json_decode($_POST["jsondata"], true);
+username();
+modified();
+removed();
+added();
+branch();
+
 
 ?>
