@@ -54,4 +54,81 @@ function modified()
 	}
 }
 
+
+function removed()
+{
+        global $jsondata;
+        $decodedJsondata['removed'] = json_decode($jsondata, true);
+        $removed = $decodedJsondata['removed'];
+
+        while (list($a, $b) = each($removed))
+        {
+                while (list($c, $d) = each($b))
+                {
+                        if ($c = "commits")
+                        {
+                                while (list($e, $f) = each($d))
+                                {
+                                        if ($e == "removed")
+                                        {
+                                                while (list($g, $h) = each($f))
+                                                {
+                                                        echo "$h <br>";
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+function added()
+{
+        global $jsondata;
+        $decodedJsondata['added'] = json_decode($jsondata, true);
+        $added = $decodedJsondata['added'];
+
+        while (list($a, $b) = each($added))
+        {
+                while (list($c, $d) = each($b))
+                {
+                        if ($c = "commits")
+                        {
+                                while (list($e, $f) = each($d))
+                                {
+                                        if ($e == "added")
+                                        {
+                                                while (list($g, $h) = each($f))
+                                                {
+                                                        echo "$h <br>";
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}
+
+function branch()
+{
+	global $jsondata;
+	$decodedJsondata['branch'] = json_decode($jsondata, true);
+	$branch = $decodedJsondata['branch'];
+	
+	while (list($a, $b) = each ($branch))
+	{
+		//echo "$b <BR>";
+		if ($a =="repository")
+		{
+			//echo "$b";
+			while (list($c, $d) = each($b))
+			{
+				if ($c == "master_branch")
+				{
+					echo "$d";
+				}
+			}
+		}
+	}
+}
 ?>
