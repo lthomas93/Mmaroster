@@ -17,7 +17,7 @@ function username()
                                         {
                                                 if ($g =="username")
                                                 {
-                                                        syslog(LOG_INFO,"$h");
+                                                        syslog(LOG_INFO,"username: $h");
                                                 }
                                         }
                                 }
@@ -45,7 +45,7 @@ function modified()
 					{
 						while (list($g, $h) = each($f))
 						{
-							syslog(LOG_INFO,"$h");
+							syslog(LOG_INFO,"modified: $h");
 						}	
 					}	
 				}	
@@ -73,7 +73,7 @@ function removed()
                                         {
                                                 while (list($g, $h) = each($f))
                                                 {
-                                                        syslog(LOG_INFO, "$h");
+                                                        syslog(LOG_INFO, "removed: $h");
                                                 }
                                         }
                                 }
@@ -100,7 +100,7 @@ function added()
                                         {
                                                 while (list($g, $h) = each($f))
                                                 {
-                                                        syslog(LOG_INFO, "$h");
+                                                        syslog(LOG_INFO, "added: $h");
                                                 }
                                         }
                                 }
@@ -125,7 +125,7 @@ function branch()
 			{
 				if ($c == "master_branch")
 				{
-					syslog(LOG_INFO, "$d");
+					syslog(LOG_INFO, "repository master_branch: $d");
 				}
 			}
 		}
