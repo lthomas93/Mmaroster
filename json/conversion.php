@@ -197,9 +197,11 @@ if (isset($_POST["jsondata"]))
 	if ($jsondata = $_POST["jsondata"])
 	{
 //		var_dump(json_decode($jsondata));
-		var_dump(json_decode($jsondata, true));
-		echo '</br></br></br></br>';
+//		var_dump(json_decode($jsondata, true));
+//		echo '</br></br></br></br>';
 		username();
+		echo "<BR><BR><BR>";
+		modified();
 	}
 }
 ?>
