@@ -1,5 +1,5 @@
 <?php
-function register($Username,$Password,$Last_name,$First_name,$School_name,$Phone_number,$Email)i
+function register($Username,$Password,$Last_name,$First_name,$School_name,$Phone_number,$Email)
 {
 
 	require_once('db_login.php');
