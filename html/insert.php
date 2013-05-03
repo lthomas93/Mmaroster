@@ -4,7 +4,7 @@ function register($Username,$Password,$Last_name,$First_name,$School_name,$Phone
 
 	require_once('db_login.php');
 	global $db_username, $db_password, $db_host, $db_database;
-	requice_once('DB.php'); //pears file location.
+	require_once('DB.php'); //pears file location.
 	$connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 	if(DB::isError($connection))
 	{
