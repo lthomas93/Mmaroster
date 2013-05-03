@@ -1,7 +1,7 @@
 <html>
 <?php
 session_start();
-function loginpage($Last_name,$First_name)
+function loginpage($Username,$md5password)
 {
 	require_once('dblogin.php');
 	require_once('DB.php');
