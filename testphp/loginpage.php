@@ -10,35 +10,35 @@ if (DB::isError($connection))
 }
 
 
-if (isset($_POST["Last_name"]))
+if (isset($_POST["Username"]))
 {
-	$Last_name = $_POST["Last_name"];
+	$Username = $_POST["Username"];
 }
 
-if (isset($_POST["First_name"]))
+if (isset($_POST["md5password"]))
 {
-	$First_name = $_POST["First_name"];
+	$md5password = $_POST["md5password"];
 }
 
-if (isset($Last_name) && isset($First_name))
+if (isset($Username) && isset($md5password))
 {
-	(($Last_name !=NULL) && ($First_name != NULL));
+	(($Username !=NULL) && ($md5password != NULL));
 	
-	if (($Last_name !=NULL) && ($First_name != NULL))
+	if (($Username !=NULL) && ($md5password != NULL))
 	{
-		loginpage($Last_name,$First_name);
+		loginpage($Username,$md5password);
 	}
 }
 
 else
 {
 
-//	echo '<form type="'.$_SERVER["PHP_SELF"].'" method="POST">';
+	echo '<form type="'.$_SERVER["PHP_SELF"].'" method="POST">';
 	echo '<form type="localhost/lthomas/Mmaroster/testphp/sessionex1.php" method="POST">';
-	echo '<label>Last name: </label><br>';
-	echo '<input type="text" name="Last_name"><br>';
-	echo '<label>First Name: <br>';
-	echo '<input type="text" name="First_name"></label?<br>';
+	echo '<label>Username: </label><br>';
+	echo '<input type="text" name="Username"><br>';
+	echo '<label>Password: <br>';
+	echo '<input type="text" name="md5password"></label?<br>';
 	echo '<label>Login!</label><input type="submit" name="submit" value="login">';
 	echo '</form>';
 }
