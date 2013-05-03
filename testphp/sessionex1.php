@@ -15,20 +15,18 @@ function loginpage($Last_name,$First_name)
 	}
 
 
-	//if (isset($_SESSION['loggedin']))
-	//{
-	//	die("You already logged in!");
-	//}
+	if (isset($_SESSION['loggedin']))
+	{
+		die("You already logged in!");
+	}
 
 
 	if (isset($_POST['submit']))
 	{
-	//	$Username = mysql_real_escape_string($_POST['Username']);
-	//	$Password = mysql_real_escape_string($_POST['Password']);
-	//	$md5password=md5($Password);
-	//$Last_name=NULL;
-	//$First_name=NULL;
-		$query = "SELECT * FROM student_roster WHERE Last_name='$Last_name' AND First_name='$First_name'";//changed password to last name for test purposes
+		$Username = mysql_real_escape_string($_POST['Username']);
+		$Password = mysql_real_escape_string($_POST['Password']);
+		$md5password=md5($Password);
+		$query = "SELECT * FROM member WHERE Username='$Username' AND Password='$md5password'";
 		$result=$connection->query($query);
 		if (DB::isError($result))
 		{
@@ -38,8 +36,8 @@ function loginpage($Last_name,$First_name)
 		if ($verify == "1")
 		{
 			echo "Password and username was correct!";
-//			$_SESSION['loggedin'] = "YES";
-//			$_SESSION['name'] = "$Username";
+			$_SESSION['loggedin'] = "YES";
+			$_SESSION['name'] = "$Username";
 			header("Location:/lthomas/Mmaroster/html/guardianupload.php");
 		}
 		else
