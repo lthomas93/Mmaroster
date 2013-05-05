@@ -22,7 +22,7 @@
 
 
 <?php
-session_start():
+session_start();
 require_once ('db_login.php');
 require_once('DB.php');
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
