@@ -33,7 +33,7 @@ if(DB::isError($connection))
 
 require_once('queryfunction2.php');
 
-if ($_SESSION['loggedin' != "YES")
+if ($_SESSION['loggedin'] != "YES")
 {
 	echo "You are not logged in!";
 	exit;
