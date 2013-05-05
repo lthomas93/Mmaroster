@@ -22,6 +22,7 @@
 
 
 <?php
+session_start():
 require_once ('db_login.php');
 require_once('DB.php');
 $connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
@@ -31,6 +32,12 @@ if(DB::isError($connection))
 }
 
 require_once('queryfunction2.php');
+
+if ($_SESSION['loggedin' != "YES")
+{
+	echo "You are not logged in!";
+	exit;
+}
 
 if (isset($_POST["Guardian_id"]))
 {
