@@ -1,7 +1,7 @@
 <?php
 require_once('db_login.php');
 require_once('DB.php');
-require_once('sessionex1.php');
+require_once('loginsession.php');
 
 $connection=DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
 if (DB::isError($connection))
