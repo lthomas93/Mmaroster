@@ -1,12 +1,12 @@
 <html>
 <head>
-<title>Student Query</title>
+<title>Logging out</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 
 <div id="top">
-<h1>Search Guardians!</h1>
+<h1>Logged out!</h1>
 <?php
 session_start();
 require_once('nav.php');
