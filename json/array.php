@@ -122,12 +122,12 @@ function branch()
 
 
 
-if (!isset($_POST["jsconDocument"]))
+if (!isset($_POST["payload"]))
 {
 	exit();
 }
 
-$decodedJsondata = json_decode($_POST["jsconDocument"], true);
+$decodedJsondata = json_decode($_POST["payload"], true);
 username();
 modified();
 removed();
