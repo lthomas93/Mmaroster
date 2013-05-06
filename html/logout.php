@@ -1,5 +1,35 @@
+<html>
+<head>
+<title>Student Query</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div id="top">
+<h1>Search Guardians!</h1>
 <?php
 session_start();
-echo "You are not logged out!";
+require_once('nav.php');
+login_nav();
+?>
+</div>
+
+<div id="left">
+<?php
+nav_menu();
+?>
+</div>
+
+<div id="right">
+
+
+
+<?php
+echo ('<pre>You are not logged out!</pre>');
 session_destroy();
 ?>
+
+</div>
+</body>
+</html>
+
