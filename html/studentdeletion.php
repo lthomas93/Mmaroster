@@ -22,7 +22,7 @@ nav_menu();
 
 
 <?php
-
+session_start();
 require_once('db_login.php');
 require_once('DB.php');
 require_once('deletefunction1.php');
@@ -33,6 +33,11 @@ if(DB::isError($connection))
 	die("Could not connect to the database:<br />".DB::errorMessage($connection));
 }
 
+if ($_SESSION['loggedin'] != "YES")
+{
+	echo "You are not logged in!";
+	exit;
+}
 
 if (isset($_POST["Student_id"]))
 {
