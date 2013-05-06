@@ -25,7 +25,7 @@ nav_menu();
 
 
 <?php
-echo ('<pre>You are not logged out!</pre>');
+echo ('<pre>You are now logged out!</pre>');
 session_destroy();
 ?>
 
