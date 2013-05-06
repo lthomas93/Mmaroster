@@ -8,11 +8,15 @@
 
 <div id="top">
 <h1>Student Roster!</h1>
+<?php
+session_start();
+require_once('nav.php');
+login_nav();
+?>
 </div>
 
 <div id="left">
 <?php
-require_once('nav.php');
 nav_menu();
 ?>
 </div>
@@ -21,7 +25,6 @@ nav_menu();
 
 
 <?php
-session_start();
 require_once('db_login.php');
 require_once('DB.php');
 
