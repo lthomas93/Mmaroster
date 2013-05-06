@@ -64,7 +64,7 @@ else
         echo '<input type="text" name="Username"><br>';
         echo '<label>Password: <br>';
         echo '<input type="text" name="Password"></label?<br>';
-        echo '<label>Login!</label><input type="submit" name="submit" value="login">';
+        echo '<label>  </label><input type="submit" name="submit" value="Login!">';
         echo '</form></pre>';
 }
 ?>
