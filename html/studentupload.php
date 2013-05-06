@@ -7,17 +7,21 @@
 
 <div id="top">
 <h1>Student Upload!</h1>
+<?php
+session_start();
+require_once('nav.php');
+login_nav();
+?>
 </div>
 
 <div id="left">
 <?php
-require_once('nav.php');
 nav_menu();
 ?>
 </div>
 
 <div id="right">
-<pre>
+
 
 
 <?php
@@ -28,7 +32,12 @@ if(DB::isError($connection))
 {
 	die("Could not connect to the database: <br />" .DB::errorMessage($connection));
 }
-  
+
+if ($_SESSION['loggedin'] != "YES")
+{
+	echo "You are not logged in!";
+	exit;
+}  
 require_once('insert1.php');
 
 require_once('loginverification.php');
@@ -94,7 +103,7 @@ if (isset($Last_name) && ($First_name) && ($Age) && ($Address) && ($City) && ($S
 } // Rest left alone for due to css code.
 else{
   echo '
-<h1>Upload Student!</h1>
+<pre><h1>Upload Student!</h1>
 <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
 <label> Last Name:    <input type="text" name="Last_name" /> </label> </br>
 <label> First Name:   <input type="text" name="First_name" /> </label> </br>
