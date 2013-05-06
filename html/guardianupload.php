@@ -8,18 +8,22 @@
 
 <div id="top">
 <h1>Guardian Upload!</h1>
+<?php
+session_start();
+require_once('nav.php');
+login_nav();
+?>
 </div>
 
 <div id="left">
 <?php
-require_once('nav.php');
 nav_menu();
 ?>
 
 </div>
 
 <div id="right">
-<pre> 
+ 
 
 
 <?php
@@ -33,6 +37,12 @@ if(DB::isError($connection))
 
 require_once('insert2.php');
 require_once('loginverification.php');
+
+if ($_SESSION['loggedin'] != "YES")
+{
+	echo "You are not logged in!";
+	exit;
+}
 
 if (isset($_POST["Guardian_id"]))
 {
@@ -89,7 +99,7 @@ if (isset($Last_name) && ($First_name) && ($Age) && ($Address) && ($City) && ($S
 }
 else{
   echo '
-<h1>Upload Guardian!</h1>
+<pre><h1>Upload Guardian!</h1>
 <form action="'.$_SERVER["PHP_SELF"].'" method="POST">
 <label> Guardian Id:  <input type="text" name="Guardian_id" /><label></br>
 <label> Last Name:    <input type="text" name="Last_name" /> </label> </br>
