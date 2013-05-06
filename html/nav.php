@@ -1,4 +1,5 @@
 <?php
+session_start();
 function nav_menu()
 {
 	echo ('
@@ -12,5 +13,23 @@ function nav_menu()
 		<li><a href="guardianquery.php">Search Guardians</a></li></br>
 		<li><a href="guardiandeletion.php">Delete Guardians</a></li></br>
 	      ');
+}
+
+function login_nav()
+{
+	global $_SESSION['loggedin'];
+	
+	if ($_SESSION['loggedin'] != "YES")
+	{
+		echo ('
+			<p align="right"> <a href="login.php"><u>Login!</u></a>
+			<a href="registration.php">   <u>Sign Up!</u></a>
+		     ');
+	}
+	
+	else
+	{
+		echo (' <p align="right"> <a href="logout.php"><u>Logout!</u></a> ');
+	}	
 }
 ?>
