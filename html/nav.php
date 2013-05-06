@@ -17,7 +17,6 @@ function nav_menu()
 
 function login_nav()
 {
-	global $_SESSION['loggedin'];
 	
 	if ($_SESSION['loggedin'] != "YES")
 	{
