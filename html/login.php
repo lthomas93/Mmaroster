@@ -1,3 +1,28 @@
+<html>
+<head>
+<title>Student Query</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div id="top">
+<h1>Please Login!</h1>
+<?php
+session_start();
+require_once('nav.php');
+login_nav();
+?>
+</div>
+
+<div id="left">
+<?php
+nav_menu();
+?>
+</div>
+
+<div id="right">
+
+
 <?php
 require_once('db_login.php');
 require_once('DB.php');
@@ -33,14 +58,16 @@ if (isset($Username) && isset($Password))
 else
 {
 
-        echo '<form type="'.$_SERVER["PHP_SELF"].'" method="POST">';
+        echo '<pre><form type="'.$_SERVER["PHP_SELF"].'" method="POST">';
         echo '<form type="localhost/lthomas/Mmaroster/testphp/sessionex1.php" method="POST">';
         echo '<label>Username: </label><br>';
         echo '<input type="text" name="Username"><br>';
         echo '<label>Password: <br>';
         echo '<input type="text" name="Password"></label?<br>';
         echo '<label>Login!</label><input type="submit" name="submit" value="login">';
-        echo '</form>';
+        echo '</form></pre>';
 }
 ?>
-
+</div>
+</body>
+</html>
