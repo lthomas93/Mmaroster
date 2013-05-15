@@ -48,8 +48,10 @@ if (isset($_POST["Last_name"]))
 
 	if ($Last_name !=NULL)
 	{
-    		echo "The search string is $Last_name.";
-      		query_db($Last_name);
+    		$column = "Last_name";
+		$info = $Last_name;
+		echo "The search string is $Last_name.";
+      		query($info);
  	}	
 }
 
@@ -59,8 +61,10 @@ if (isset($_POST["First_name"]))
 
   	if ($First_name !=NULL)
 	{
-    		echo "The search string is $First_name";
-      		query_db1($First_name);
+    		$column = "First_name";
+		$info = $First_name;
+		echo "The search string is $First_name";
+      		query($info);
 		exit;
   	}
 }
@@ -71,8 +75,10 @@ if (isset($_POST["Age"]))
 
  	if ($Age !=NULL)
 	{
-   		echo "The search string is $Age";
-     		query_db2($Age);
+   		$column = "Age";
+		$info = $Age";
+		echo "The search string is $Age";
+     		query($info);
  	}
 }
 
@@ -82,8 +88,10 @@ if (isset($_POST["Address"]))
 
   	if ($Address !=NULL)
 	{
+		$column = "Address";
+		$info = $Address;
     		echo "The search string is $Address";
-      		query_db3($Address);
+      		query($info);
   	}
 }
 
@@ -93,8 +101,10 @@ if (isset($_POST["City"]))
 
   	if ($City !=NULL)
 	{
+		$column = "City";
+		$info = $City;
     		echo "The search string is $City";
-      		query_db4($City);
+      		query($info);
   	}
 }
 
@@ -104,8 +114,10 @@ if (isset($_POST["State"]))
 
   	if ($State !=NULL)
 	{
+		$column = "State";
+		$info = $State;
     		echo "The search string is $State";
-      		query_db5($State);
+      		query($info);
   	}
 }
 
@@ -115,8 +127,10 @@ if (isset($_POST["Zip_code"]))
 
   	if($Zip_code !=NULL) 
 	{
+		$column = "Zip_code";
+		$info = $Zip_code;
     		echo "The search string is $Zip_code";
-      		query_db6($Zip_code);
+      		query($info);
   	}
 }
 
@@ -126,8 +140,10 @@ if (isset($_POST["Phone_number"]))
 
   	if($Phone_number !=NULL)
 	{
+		$column = "Phone_number";
+		$info = $Zip_code;
     		echo "The search string is $Phone_number";
-      		query_db7($Phone_number);
+      		query($info);
   	}	
 }
 
@@ -137,8 +153,10 @@ if (isset($_POST["Minor"]))
 
   	if($Minor !=NULL)
 	{
+		$column = "Minor";
+		$info = $Minor;
     		echo "The search string is $Minor";
-      		query_db8($Minor);
+      		query($info);
   	}
 }
 
@@ -148,13 +166,15 @@ if (isset($_POST["Guardian_id"]))
 
   	if($Guardian_id !=NULL)
 	{
+		$column = "Guardian_id";
+		$info = $Guardian_id;
    		echo "The search string is $Guardian_id";
-    		query_db9($Guardian_id);
+    		query($info);
   	}
 }
 else{
  echo ('
-<form action="'.$_SERVER["PHP_SELF"].'" method="POST">
+<form action='.$_SERVER["PHP_SELF"].' method="POST">
 <pre><label>Last Name:    <input type="text" name="Last_name"/></label> <input type="submit" value="Search!"/></br>
 <label>First Name:   <input type="text" name="First_name"/></label> <input type="submit" value="Search!"/></br>
 <label>Age:          <input type="text" name="Age"/></label> <input type="submit" value="Search!"/></br>
