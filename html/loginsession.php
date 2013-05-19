@@ -37,7 +37,7 @@ function loginpage($Username,$Last_name)
                 if ($verify == "1")
                 {
                         echo "Password and username was correct!";
-//                        $_SESSION['loggedin'] = "YES";
+                        $_SESSION['loggedin'] = "YES";
 //                      $_SESSION['name'] = "$Username";
 //                      header("Location:/lthomas/Mmaroster/html/guardianupload.php");
                 }

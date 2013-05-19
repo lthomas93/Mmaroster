@@ -34,7 +34,7 @@ if(DB::isError($connection))
 	die("Could not connect to the database:<br />".DB::errorMessage($connection));
 }
 
-require_once('queryfunction.php');
+require_once('query.php');
 
 if ($_SESSION['loggedin'] != "YES")
 {
@@ -76,7 +76,7 @@ if (isset($_POST["Age"]))
  	if ($Age !=NULL)
 	{
    		$column = "Age";
-		$info = $Age";
+		$info = $Age;
 		echo "The search string is $Age";
      		query($info);
  	}
