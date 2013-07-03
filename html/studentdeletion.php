@@ -8,7 +8,11 @@
 <div id="top">
 <h1>Delete Students!</h1>
 <?php
-session_start();
+if (!isset($_SESSION))
+{
+        session_start();
+}
+
 require_once('nav.php');
 login_nav();
 ?>
