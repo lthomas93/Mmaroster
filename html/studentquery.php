@@ -9,6 +9,8 @@
 <h1>Search Students!</h1>
 <?php
 session_start();
+
+
 require_once('nav.php');
 login_nav();
 ?>
@@ -76,7 +78,7 @@ if (isset($_POST["Age"]))
  	if ($Age !=NULL)
 	{
    		$column = "Age";
-		$info = $Age";
+		$info = "$Age";
 		echo "The search string is $Age";
      		query($info);
  	}
