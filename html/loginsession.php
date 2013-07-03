@@ -1,6 +1,10 @@
 <html>
 <?php
-session_start();
+if (!isset($_SESSION))
+{
+        session_start();
+}
+
 function loginpage($Username,$Last_name)
 {
         require_once('db_login.php');
