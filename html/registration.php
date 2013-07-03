@@ -11,6 +11,11 @@
 
 <div id="left">
 <?php
+if (!isset($_SESSION))
+{
+        session_start();
+}
+
 require_once('nav.php');
 nav_menu();
 ?>
@@ -18,7 +23,6 @@ nav_menu();
 
 <div id="right">
 <?php
-//session_start();
 require_once('db_login.php');
 require_once('DB.php');
 require_once('insert.php');
