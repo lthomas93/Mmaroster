@@ -18,7 +18,7 @@ nav_menu();
 
 <div id="right">
 <?php
-session_start();
+//session_start();
 require_once('db_login.php');
 require_once('DB.php');
 require_once('insert.php');
