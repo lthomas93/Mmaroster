@@ -9,7 +9,11 @@
 <div id="top">
 <h1>Guardian Roster!</h1>
 <?php
-session_start();
+if (!isset($_SESSION))
+{
+        session_start();
+}
+
 require_once('nav.php');
 login_nav();
 ?>
