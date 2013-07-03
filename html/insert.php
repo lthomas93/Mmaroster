@@ -12,7 +12,6 @@ function register($Username,$Password,$Last_name,$First_name,$School_name,$Phone
 	}
 
 
-	$Instructor_id = htmlentities($Instructor_id);
 	$Username = htmlentities($Username);
 	$Password = htmlentities($Password);
 	$Last_name = htmlentities($Last_name);
@@ -23,7 +22,6 @@ function register($Username,$Password,$Last_name,$First_name,$School_name,$Phone
 
 	if(get_magic_quotes_gpc())
 	{
-		$Instructor_id = stripslashes($Instructor_id);
 		$Username = stripslashes($Username);
 		$Password = stripslashes($Password);
 		$Last_name = stripslashes($Last_name);
@@ -33,7 +31,6 @@ function register($Username,$Password,$Last_name,$First_name,$School_name,$Phone
 		$Email = stripslashes($Email);
 	}
 
-	$Instructor_id=mysql_real_escape_string($Instructor_id);
 	$Username = mysql_real_escape_string($Username);
 	$Password = mysql_real_escape_string($Password);
 	$Last_name = mysql_real_escape_string($Last_name);

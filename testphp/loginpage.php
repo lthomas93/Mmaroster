@@ -15,18 +15,18 @@ if (isset($_POST["Username"]))
 	$Username = $_POST["Username"];
 }
 
-if (isset($_POST["md5password"]))
+if (isset($_POST["Password"]))
 {
-	$md5password = $_POST["md5password"];
+	$Password = $_POST["Password"];
 }
 
-if (isset($Username) && isset($md5password))
+if (isset($Username) && isset($Password))
 {
-	(($Username !=NULL) && ($md5password != NULL));
+	(($Username !=NULL) && ($Password != NULL));
 	
-	if (($Username !=NULL) && ($md5password != NULL))
+	if (($Username !=NULL) && ($Password != NULL))
 	{
-		loginpage($Username,$md5password);
+		loginpage($Username,$Password);
 	}
 }
 
@@ -38,7 +38,7 @@ else
 	echo '<label>Username: </label><br>';
 	echo '<input type="text" name="Username"><br>';
 	echo '<label>Password: <br>';
-	echo '<input type="text" name="md5password"></label?<br>';
+	echo '<input type="text" name="Password"></label?<br>';
 	echo '<label>Login!</label><input type="submit" name="submit" value="login">';
 	echo '</form>';
 }

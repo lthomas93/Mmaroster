@@ -1,7 +1,7 @@
 <html>
 <?php
 session_start();
-function loginpage($Username,$md5password)
+function loginpage($Username,$Last_name)
 {
 	require_once('dblogin.php');
 	require_once('DB.php');
@@ -26,19 +26,21 @@ function loginpage($Username,$md5password)
 		$Username = mysql_real_escape_string($_POST['Username']);
 		$Password = mysql_real_escape_string($_POST['Password']);
 		$md5password=md5($Password);
-		$query = "SELECT * FROM member WHERE Username='$Username' AND Password='$md5password'";
+		$query = "SELECT * FROM members WHERE Username='$Username' AND Password='$md5password'";
 		$result=$connection->query($query);
 		if (DB::isError($result))
 		{
 			die ("Could not query the database. <br />" .$query." ".DB::errorMessage($result));
 		}
 		$verify = $result->numRows();
+//		echo "$verify";
+//		echo "$md5password";
 		if ($verify == "1")
 		{
 			echo "Password and username was correct!";
-			$_SESSION['loggedin'] = "YES";
-			$_SESSION['name'] = "$Username";
-			header("Location:/lthomas/Mmaroster/html/guardianupload.php");
+//			$_SESSION['loggedin'] = "YES";
+//			$_SESSION['name'] = "$Username";
+//			header("Location:/lthomas/Mmaroster/html/guardianupload.php");
 		}
 		else
 		{
