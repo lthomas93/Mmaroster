@@ -31,14 +31,23 @@ nav_menu();
 
 <?php
 require_once('db_login.php');
-require_once('DB.php');
+//require_once('DB.php');
 require_once('deletefunction2.php');
 
-$connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
-if(DB::isError($connection))
+$mysqli = mysqli_connect("$db_host", "$db_username", "$db_password", "$db_database");
+if (mysqli_connect_error($mysqli))
 {
-    die("Could not connect to the database:<br />".DB::errorMessage($connection));
+	echo "Failed to connect to mysql: " . mysqli_connect_error();
 }
+else
+{
+	echo "You are properly connect!";
+}
+//$connection = DB::connect("mysql://$db_username:$db_password@$db_host/$db_database");
+//if(DB::isError($connection))
+//{
+//    die("Could not connect to the database:<br />".DB::errorMessage($connection));
+//}
 if ($_SESSION['loggedin'] != "YES")
 {
 	echo "You are not logged in!";
